@@ -18,6 +18,57 @@ La tarea corre cada jueves y deja **lista la semana que empieza el lunes siguien
 - Oferta vigente: **Diagnóstico de 30 minutos sin costo**. CTA: **WhatsApp 222 352 6054** y dyntec.com.mx.
 - Tono: directo, cercano, español de México, frases cortas. Mensaje central: "tu negocio, en automático"; "lo ves funcionando antes de invertir en todo".
 
+
+## 2b. Sistema de variedad (obligatorio)
+
+Ninguna semana puede parecerse a la anterior. Cada pieza del calendario trae un **código de formato**; si dice `libre`, elige uno que no se haya usado en las últimas 3 semanas (revisa `formatos_usados.md` y agrega ahí lo que uses).
+
+### Formatos de reel
+| Código | Formato | Cómo se hace |
+|---|---|---|
+| R1 | Texto cinético | Solo tipografía gigante animada al ritmo de la música, cortes cada 0.5–1 s, fondos que alternan oscuro/teal/claro. Sin mockups. |
+| R2 | POV / humor | "POV: eres el dueño y son las 11 p.m.…". Clip IA de 5 s (Veo Lite) + texto en pantalla + música. Voz opcional. |
+| R3 | Antes/después en pantalla dividida | Mitad caos (papel, Excel), mitad sistema; contador de tiempo o errores. |
+| R4 | Producto en acción 2.5D | Pantallas reales del CRM o demos (datos ficticios) con zoom, inclinación y parallax; cortes sincronizados con efectos de sonido (clic, whoosh). Puedes usar Remotion. |
+| R5 | Rayos X / explicativo | Como "Rayos X de un chatbot". Máximo uno cada 4 semanas. |
+| R6 | Lluvia de notificaciones | Avalancha de WhatsApps y errores de Excel con sonido; silencio total cuando entra el sistema. |
+| R7 | Top 3 / cuenta regresiva | "3 señales…", "3 errores…", números gigantes. |
+| R8 | Quiz para comentar | Pregunta con opciones A/B/C, pausa con temporizador, "responde en comentarios". |
+| R9 | Socio a cámara | Solo si el equipo sube un video grabado; Claude lo edita con subtítulos y gráficos. |
+| R10 | Escena cinematográfica IA | 1–2 clips Veo Lite de un negocio genérico (sin marcas ni rostros reconocibles) + interfaz superpuesta. |
+
+### Formatos de post
+| Código | Formato |
+|---|---|
+| P1 | Carrusel educativo oscuro (el clásico). Máximo uno cada 2 semanas. |
+| P2 | Carrusel "Mito vs. realidad" en fondo claro, tachados grandes. |
+| P3 | Tarjeta de opinión: una frase fuerte de Dyntec, tipografía enorme, fondo de color pleno. |
+| P4 | Checklist para guardar ("guárdalo para tu próxima junta"), fondo teal. |
+| P5 | Foto editorial IA a sangre (negocio mexicano genérico) + titular de la plantilla. La IA nunca escribe texto en la imagen. |
+| P6 | Infografía/diagrama de un proceso automatizado paso a paso. |
+| P7 | Comparativa estilo hoja de cálculo: Excel vs. sistema. |
+| P8 | Carrusel quiz: "desliza para ver la respuesta". |
+| P9 | Meme propio en 2 paneles ilustrados por IA (sin personajes ni plantillas con derechos). |
+| P10 | Ficha de caso con datos ficticios: reto, solución, resultado. |
+
+### Historias
+Rota entre: encuesta, slider de emoji, quiz, caja de preguntas, "esto o esto", cuenta regresiva al siguiente post, reshare del post del día y detrás de cámara (pide fotos al equipo en el resumen).
+
+### Reglas de diseño para variar
+- Rota 3 fondos: oscuro `#121a22`, teal `#009481` y claro (`#F4FAF9` o blanco). Nunca 2 piezas seguidas con el mismo fondo dominante.
+- Rota composiciones: tipografía centrada gigante, asimétrica, retícula, foto a sangre, collage. La ola teal es un recurso, no un requisito.
+- Gancho visual en el primer segundo; en reels, corte o movimiento cada 1–2 s; nada estático más de 1.5 s.
+- Subtítulos palabra por palabra (estilo karaoke) en todo reel con voz; tiempos con ElevenLabs Scribe o Whisper.
+- Alterna reels con voz y reels solo con música y texto (al menos 1 de cada 4 sin voz).
+- Música: biblioteca de pistas instrumentales propias en `plantillas/audio/` (genera nuevas con ElevenLabs Music solo si faltan; reutilízalas). Efectos de sonido generados una vez y guardados ahí.
+- Crea una plantilla nueva por formato la primera vez que se use (`plantillas/formatos/<código>.html`) y reutilízala después con cambios de layout.
+
+### Presupuesto de ElevenLabs (plan Starter, 40,000 créditos/mes, renueva el día 3)
+Costos medidos: voz de reel ~450 · imagen IA ~190 · pista de música ~1,500 · clip de video Veo 3.1 Lite de 5 s ~2,400 (**no uses Seedance ni Kling**: ~14,000 por clip).
+- Por semana, máximo: 2 voces, 6 imágenes IA, 1 clip de video Veo Lite y 1 pista nueva de música.
+- Antes de cualquier video o música corre `estimate_only`; si la semana pasaría de 7,000 créditos, cambia a un formato sin video IA.
+- Revisa `account_get_usage` al empezar; si quedan menos de 6,000 créditos, usa solo voz y formatos sin IA generativa.
+
 ## 3. Marca
 
 - Usa solo las plantillas de `plantillas/` y `brand.css`. Colores `#121a22`, `#009481`, `#5ac3b7`. Títulos Open Sauce One Bold, textos Roboto. Isotipo `assets/official/iso_blanco.png`.
