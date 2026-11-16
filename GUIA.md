@@ -63,8 +63,21 @@ Rota entre: encuesta, slider de emoji, quiz, caja de preguntas, "esto o esto", c
 - Música: biblioteca de pistas instrumentales propias en `plantillas/audio/` (genera nuevas con ElevenLabs Music solo si faltan; reutilízalas). Efectos de sonido generados una vez y guardados ahí.
 - Crea una plantilla nueva por formato la primera vez que se use (`plantillas/formatos/<código>.html`) y reutilízala después con cambios de layout.
 
+
+### Modelos de imagen (vía ElevenLabs, sin conectar nada más)
+| Uso | Modelo | Créditos aprox. |
+|---|---|---|
+| Foto editorial realista de negocios (P5), escenas base para clips | `gpt-image-2.5-sunburst` (default) o `flux-3-image` | 190 · 290 |
+| Imagen "héroe" de máxima calidad o personaje/escena que debe repetirse igual en varias láminas (con imágenes de referencia) | `gemini-3-pro-image` (Nano Banana Pro) | 1,220 · **máx. 1 por semana** |
+| Ilustración vectorial, íconos, memes propios en 2 paneles (P9), infografías (P6) | `recraft-v4.1` · `recraft-v4.1-pro-vector` | 240 |
+| Póster tipográfico o imagen donde el texto es parte del diseño | `ideogram-4.5` (revisar ortografía letra por letra; el texto final se pone en plantilla si sale mal) | 360 |
+| Fotos de producto o pantallas en contexto (tablet en mostrador, celular en mano) | `flux-3-image` o `bytedance-seedream-5-pro` | ~290 |
+| Quitar fondo / ampliar resolución | `birefnet-v2-bg-removal` · `topaz-image-upscale-v2` | bajo |
+
+Reglas: `generations_count` 1 (máximo 2 si el post depende de la imagen); relación 4:5 para posts y 9:16 para historias; nada de marcas, logos ni rostros reconocibles; personas genéricas y diversas de México; en el texto de la publicación no se dice que una foto IA es un cliente real.
+
 ### Presupuesto de ElevenLabs (plan Starter, 40,000 créditos/mes, renueva el día 3)
-Costos medidos: voz de reel ~450 · imagen IA ~190 · pista de música ~1,500 · clip de video Veo 3.1 Lite de 5 s ~2,400 (**no uses Seedance ni Kling**: ~14,000 por clip).
+Costos medidos: voz de reel ~450 · imagen IA 190–360 (Nano Banana Pro ~1,220) · pista de música ~1,500 · clip de video Veo 3.1 Lite de 5 s ~2,400 (**no uses Seedance ni Kling**: ~14,000 por clip).
 - Por semana, máximo: 2 voces, 6 imágenes IA, 1 clip de video Veo Lite y 1 pista nueva de música.
 - Antes de cualquier video o música corre `estimate_only`; si la semana pasaría de 7,000 créditos, cambia a un formato sin video IA.
 - Revisa `account_get_usage` al empezar; si quedan menos de 6,000 créditos, usa solo voz y formatos sin IA generativa.
