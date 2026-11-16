@@ -79,9 +79,10 @@ Reglas: `generations_count` 1 (máximo 2 si el post depende de la imagen); relac
 
 ### Presupuesto de ElevenLabs (plan Starter, 40,000 créditos/mes, renueva el día 3)
 Costos medidos: voz de reel ~450 · imagen IA 190–360 (Nano Banana Pro ~1,220) · pista de música ~1,500 · clip de video Veo 3.1 Lite de 5 s ~2,400 (**no uses Seedance ni Kling**: ~14,000 por clip).
-- Por semana, máximo: 3 voces, 6 imágenes IA, 1 clip de video Veo Lite y 1 pista nueva de música. Tope total ~7,000 créditos por semana (la cuenta de ElevenLabs se comparte con otro proyecto).
-- Antes de cualquier video o música corre `estimate_only`; si la semana pasaría de 7,000 créditos, cambia a un formato sin video IA.
-- Revisa `account_get_usage` al empezar; si quedan menos de 6,000 créditos, usa solo voz y formatos sin IA generativa.
+- **Tope total ~4,000 créditos por semana** (desde el 16 nov 2026 la cuenta de ElevenLabs se reparte con GuiaComida, que tiene el mismo tope; su tarea corre los miércoles).
+- Por semana, máximo: 2 voces, 4 imágenes IA y **una sola** de estas dos: 1 clip de video Veo Lite (~2,400) **o** 1 pista nueva de música (~900–1,500). En semanas con dos formatos que pidan video IA (R2 y R10), uno se hace con imagen fija IA animada en Remotion (zoom/parallax) en lugar de clip.
+- Antes de cualquier video o música corre `estimate_only`; si la semana pasaría de 4,000 créditos, cambia a un formato sin video IA.
+- Revisa `account_get_usage` al empezar; si quedan menos de 8,000 créditos antes de la renovación (día 3), usa solo voz y formatos sin IA generativa.
 
 
 ## 2c. Herramientas para producir con variedad (usar desde la semana 2)
