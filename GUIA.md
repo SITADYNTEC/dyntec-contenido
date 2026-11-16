@@ -69,6 +69,45 @@ Costos medidos: voz de reel ~450 · imagen IA ~190 · pista de música ~1,500 ·
 - Antes de cualquier video o música corre `estimate_only`; si la semana pasaría de 7,000 créditos, cambia a un formato sin video IA.
 - Revisa `account_get_usage` al empezar; si quedan menos de 6,000 créditos, usa solo voz y formatos sin IA generativa.
 
+
+## 2c. Herramientas para producir con variedad (usar desde la semana 2)
+
+Los reels nuevos se hacen en **Remotion** (proyecto en `remotion/`, se crea la primera vez con el skill `remotion:remotion-create`) apoyándose en las **recetas de video-shotcraft**. Las plantillas HTML de `plantillas/` quedan solo para posts e historias o como respaldo.
+
+**Skills disponibles en la cuenta:**
+- `remotion:remotion-best-practices` (router): leer antes de escribir código Remotion. Temas útiles: `transitions`, `effects`, `light-leaks`, `text-highlights`, `3d`, `audio-visualization`, `sfx`, `local-fonts`, `multi-scene-video`, `voiceover`.
+- `remotion:remotion-captions`: subtítulos palabra por palabra. Tiempos con ElevenLabs Scribe (Whisper.cpp puede no descargar su modelo por la red).
+- `video-shotcraft:video-shotcraft`: modo **"单镜头/单动效" (una toma)**: elegir una tarjeta de `references/shots/<categoría>/`, leerla completa y adaptar su demo. ~180 tomas en 11 categorías. Componentes en `assets/lib/` (copiarlos al proyecto, no importarlos).
+- `marketing:brand-review`: pasar cada semana los textos por revisión de marca antes de crear borradores.
+- `marketing:performance-report`: reporte mensual con las métricas de Metricool (`getAnalyticsDataByMetrics`).
+- `marketing:content-creation` / `marketing:draft-content`: ganchos y textos de publicación.
+
+**Recetas sugeridas por formato** (tarjetas de video-shotcraft; rota para no repetir):
+| Formato | Tomas sugeridas |
+|---|---|
+| R1 texto cinético | typography: `flying-words`, `cel-flash-stomp`, `lead-word-zoom-assemble`, `split-flap-title`, `scramble`, `gradient-word-sweep`, `type-rhythm-sync` + rhythm: `beat-cut-moves`, `trailer-grammar-moves` |
+| R2 POV / R10 escena IA | Clip Veo Lite en `<Video>` con effects `duotone()` (navy/teal), `vignette()`, `chromaticAberration()`, `lightLeak()`; transitions: `white-flash-logo-simplify-cut`, `circle-match-iris` |
+| R3 pantalla dividida | data: `before-after-slider-scrub`; rhythm: `quad-split-parallel-scenes`, `speed-ramp-freeze` |
+| R4 producto 2.5D | camera: `cursor-flyover`, `depth-layer-moves`, `crash-zoom-punch`, `steep-tilt-glide`; interaction: `ai-stream-response`, `command-palette-summon`, `type-and-filter` (ideal para el Copiloto del CRM) |
+| R5 explicativo | ui-entrance: `integration-hub-map`, `draw-svg-trace`; effects: `scan-bracket-sweep`, `fui-hud-moves` |
+| R6 lluvia de notificaciones | ui-entrance: `card-stack`, `list-stack-press`, `deck-deal-flyin`; effects: `impact-feedback`; rhythm: `rhythm-interrupt-moves` |
+| R7 top 3 | typography: `countdown-arc-scatter`; data: `odometer-digit-roll`, `counter-confetti`, `gauge-readout-moves` |
+| R8 quiz | interaction: `chip-grid-single-select-blackout`, `picker-carousel-feature-cycle`, `segmented-thumb-hero` |
+| Aperturas (rotar) | opening: `brand-ink-open`, `text-as-mask`, `letterspace-materialize`, `orbit-ring-title-open`, `fracture` |
+| Cierres (rotar) | outro: `logo-shrink-wordmark-lockup`, `ui-to-brand-morph`, `grain-dissolve`, `ui-strip-away-outro` |
+
+**Más ideas para variar:**
+- Textura de la semana: rota un efecto global distinto (`halftone()`, `paper()`, `noise()`, `scanlines()`, `duotone()` con colores de marca).
+- Isotipo en 3D (Three.js con `ThreeCanvas`) para aperturas especiales, máximo una vez al mes.
+- Barras de audio (`audio-visualization`) bajo la voz en reels tipo "nota de voz".
+- Carruseles mixtos: Instagram admite videos dentro del carrusel. Alterna láminas fijas con 1 o 2 clips cortos renderizados en Remotion.
+- Prueba de ganchos: para un reel por mes, crea un segundo borrador como `TRIAL_REEL` (solo lo ven no seguidores) con otro gancho, y compara en Metricool.
+- Posts: Remotion puede exportar fotogramas fijos (`renderStill`) con los mismos componentes que los reels; úsalo para carruseles con el estilo de la semana.
+
+**Audio y licencias:**
+- Efectos de sonido: usa los de `video-shotcraft/assets/audio/sfx/` que tengan licencia registrada en `ATTRIBUTION.md` (Mixkit) o genera con ElevenLabs SFX. Los de `remotion.media` no descargan (dominio no permitido).
+- Música: **no uses las pistas de `video-shotcraft/assets/audio/bgm/`** (licencia comercial sin confirmar). Usa solo pistas generadas con ElevenLabs Music guardadas en `plantillas/audio/`.
+
 ## 3. Marca
 
 - Usa solo las plantillas de `plantillas/` y `brand.css`. Colores `#121a22`, `#009481`, `#5ac3b7`. Títulos Open Sauce One Bold, textos Roboto. Isotipo `assets/official/iso_blanco.png`.
