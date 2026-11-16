@@ -1,6 +1,6 @@
 # Guía de producción semanal (para la tarea automática)
 
-La tarea corre cada jueves y deja **lista la semana que empieza el lunes siguiente**. Nunca publica: solo crea **borradores** en Metricool. El equipo de Dyntec los revisa y programa el viernes.
+La tarea corre cada jueves y deja **lista la semana que empieza el lunes siguiente** (3 reels, 3 posts, 2 historias de apoyo programables y 1–3 historias manuales). Nunca publica: solo crea **borradores** en Metricool. El equipo de Dyntec los revisa y programa el viernes.
 
 ## 1. Qué producir
 
@@ -21,7 +21,7 @@ La tarea corre cada jueves y deja **lista la semana que empieza el lunes siguien
 
 ## 2b. Sistema de variedad (obligatorio)
 
-Ninguna semana puede parecerse a la anterior. Cada pieza del calendario trae un **código de formato**; si dice `libre`, elige uno que no se haya usado en las últimas 3 semanas (revisa `formatos_usados.md` y agrega ahí lo que uses).
+Ninguna semana puede parecerse a la anterior. Cada pieza del calendario trae un **código de formato**; si dice `libre`, elige uno que no se haya usado en las 2 semanas anteriores (revisa `formatos_usados.md` y agrega ahí lo que uses).
 
 ### Formatos de reel
 | Código | Formato | Cómo se hace |
@@ -55,11 +55,12 @@ Ninguna semana puede parecerse a la anterior. Cada pieza del calendario trae un 
 Rota entre: encuesta, slider de emoji, quiz, caja de preguntas, "esto o esto", cuenta regresiva al siguiente post, reshare del post del día y detrás de cámara (pide fotos al equipo en el resumen).
 
 ### Reglas de diseño para variar
+- Ritmo Starter: 3 reels + 3 posts por semana. Con 6 piezas, varía también entre ellas dentro de la misma semana (ningún par de piezas seguidas con el mismo formato ni fondo).
 - Rota 3 fondos: oscuro `#121a22`, teal `#009481` y claro (`#F4FAF9` o blanco). Nunca 2 piezas seguidas con el mismo fondo dominante.
 - Rota composiciones: tipografía centrada gigante, asimétrica, retícula, foto a sangre, collage. La ola teal es un recurso, no un requisito.
 - Gancho visual en el primer segundo; en reels, corte o movimiento cada 1–2 s; nada estático más de 1.5 s.
 - Subtítulos palabra por palabra (estilo karaoke) en todo reel con voz; tiempos con ElevenLabs Scribe o Whisper.
-- Alterna reels con voz y reels solo con música y texto (al menos 1 de cada 4 sin voz).
+- Alterna reels con voz y reels solo con música y texto (al menos 1 de los 3 reels de cada semana sin voz; el calendario los marca como "sin voz").
 - Música: biblioteca de pistas instrumentales propias en `plantillas/audio/` (genera nuevas con ElevenLabs Music solo si faltan; reutilízalas). Efectos de sonido generados una vez y guardados ahí.
 - Crea una plantilla nueva por formato la primera vez que se use (`plantillas/formatos/<código>.html`) y reutilízala después con cambios de layout.
 
@@ -78,7 +79,7 @@ Reglas: `generations_count` 1 (máximo 2 si el post depende de la imagen); relac
 
 ### Presupuesto de ElevenLabs (plan Starter, 40,000 créditos/mes, renueva el día 3)
 Costos medidos: voz de reel ~450 · imagen IA 190–360 (Nano Banana Pro ~1,220) · pista de música ~1,500 · clip de video Veo 3.1 Lite de 5 s ~2,400 (**no uses Seedance ni Kling**: ~14,000 por clip).
-- Por semana, máximo: 2 voces, 6 imágenes IA, 1 clip de video Veo Lite y 1 pista nueva de música.
+- Por semana, máximo: 3 voces, 6 imágenes IA, 1 clip de video Veo Lite y 1 pista nueva de música. Tope total ~7,000 créditos por semana (la cuenta de ElevenLabs se comparte con otro proyecto).
 - Antes de cualquier video o música corre `estimate_only`; si la semana pasaría de 7,000 créditos, cambia a un formato sin video IA.
 - Revisa `account_get_usage` al empezar; si quedan menos de 6,000 créditos, usa solo voz y formatos sin IA generativa.
 
@@ -138,10 +139,11 @@ Los reels nuevos se hacen en **Remotion** (proyecto en `remotion/`, se crea la p
 ## 5. Subir y crear borradores
 
 1. `git add`, commit y `git push` a `main` (repo público: Metricool toma los archivos de `https://raw.githubusercontent.com/SITADYNTEC/dyntec-contenido/main/<ruta>`).
-2. Metricool, marca `blogId 8136891`, red `instagram`, zona `America/Mexico_City`. Para cada pieza de la semana, `createScheduledPost` con `"draft": true`, a las 13:00 del día que marca el calendario:
-   - Reel: `instagramData.type = "REEL"`, `isAiGenerated: true` (voz sintética).
-   - Carrusel/post: `type = "POST"`, `media` con las imágenes en orden.
-   - Historias **no** se suben a Metricool: quedan en `publicar/` para subirlas a mano.
+2. Metricool, marca `blogId 8136891`, zona `America/Mexico_City`, plan **Starter**. Para cada pieza de la semana, `createScheduledPost` con `"draft": true`, en el día y hora que marca `calendario.md` (lun post 13:00, mar reel 13:00, mié post 13:00, jue reel 13:00, vie post 13:00, sáb reel 11:00):
+   - Reel: `instagramData.type = "REEL"`, `isAiGenerated: true` si lleva voz o imágenes/video IA.
+   - Carrusel/post: `type = "POST"`, `media` con las imágenes en orden (`isAiGenerated: true` si usa imágenes IA).
+   - Historias de apoyo (mar y jue 18:00): `type = "STORY"`, sin texto, una imagen 1080×1920 que anuncie el reel del día. Las historias con encuesta, preguntas o quiz **no** van a Metricool: quedan en `publicar/` para subirlas a mano.
+   - Redes: al empezar llama `getBrandSettings`. Publica en **todas las redes conectadas** de la marca: Instagram siempre; si Facebook está conectado, agrega `facebook` (REEL/POST/STORY según la pieza) y avisa en el resumen que hay que **desactivar el compartido automático Instagram → Facebook** para no duplicar; si LinkedIn está conectado, agrega `linkedin` solo en carruseles y posts (carrusel con `publishImagesAsPDF: true` y `documentTitle`).
 3. Texto de cada publicación: 1 a 3 líneas + CTA con el WhatsApp + 4 a 6 hashtags (#Puebla #PyMEs #Automatización + del tema).
 4. Antes de crear, revisa con `getScheduledPosts` que no exista ya un borrador para ese día (no duplicar).
 

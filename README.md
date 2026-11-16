@@ -10,7 +10,7 @@ Contenido para redes sociales de Dyntec (Instagram y Facebook): plantillas de ma
 - Capturas y mockups siempre con datos ficticios.
 - Marca oficial (Manual de identidad 2024): `#009481`, `#5ac3b7`, `#121a22`; títulos en Open Sauce One Bold y textos en Roboto (`plantillas/assets/official/fonts/`); isotipo en `plantillas/assets/official/`.
 - Voz en off: ElevenLabs, voz **Pablo Rosete** (`ZpHPHPi1Mi7JR15GRhqv`), modelo `eleven_v4`.
-- Ritmo (plan Free de Metricool, máx. 20 programadas al mes): **2 reels + 2 posts por semana**. Historias directo en Instagram.
+- Ritmo (Metricool **Starter**): **3 reels + 3 posts por semana** + 2 historias de apoyo programadas. Historias con stickers, directo en Instagram.
 
 Calendario: [`calendario.md`](calendario.md) · Guía de producción: [`GUIA.md`](GUIA.md)
 
@@ -28,7 +28,7 @@ publicar/AAAA-MM-DD_semanaN/   piezas finales de cada semana
 
 ## Flujo semanal
 
-1. **Jueves:** se generan guiones, voces y piezas de la semana siguiente y se suben a `publicar/`.
+1. **Jueves 11:35:** se generan guiones, voces y piezas de la semana siguiente y se suben a `publicar/`.
 2. Se crean como **borradores** en el Planificador de Metricool, con fecha y hora.
 3. **Viernes:** el equipo revisa y programa cada borrador en Metricool. Lo que no se programa, no se publica.
 
