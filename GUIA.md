@@ -74,7 +74,7 @@ Costos medidos: voz de reel ~450 · imagen IA ~190 · pista de música ~1,500 ·
 
 Los reels nuevos se hacen en **Remotion** (proyecto en `remotion/`, se crea la primera vez con el skill `remotion:remotion-create`) apoyándose en las **recetas de video-shotcraft**. Las plantillas HTML de `plantillas/` quedan solo para posts e historias o como respaldo.
 
-**Skills disponibles en la cuenta:**
+**Skills disponibles en la cuenta** (si en la sesión no aparecen, instala `remotion` con npm, consulta la documentación oficial con `remotion:remotion-docs` o la web, y arma las tomas a mano siguiendo la misma lógica; anótalo en el resumen):
 - `remotion:remotion-best-practices` (router): leer antes de escribir código Remotion. Temas útiles: `transitions`, `effects`, `light-leaks`, `text-highlights`, `3d`, `audio-visualization`, `sfx`, `local-fonts`, `multi-scene-video`, `voiceover`.
 - `remotion:remotion-captions`: subtítulos palabra por palabra. Tiempos con ElevenLabs Scribe (Whisper.cpp puede no descargar su modelo por la red).
 - `video-shotcraft:video-shotcraft`: modo **"单镜头/单动效" (una toma)**: elegir una tarjeta de `references/shots/<categoría>/`, leerla completa y adaptar su demo. ~180 tomas en 11 categorías. Componentes en `assets/lib/` (copiarlos al proyecto, no importarlos).
