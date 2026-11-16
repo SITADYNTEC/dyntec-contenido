@@ -8,9 +8,11 @@ Contenido para redes sociales de Dyntec (Instagram y Facebook): plantillas de ma
 
 - Sin nombres, logos, dominios ni colores de marca de clientes. Sin montos de contratos ni cotizaciones.
 - Capturas y mockups siempre con datos ficticios.
-- Marca oficial (Manual de identidad 2024): `#009481`, `#5ac3b7`, `#121a22`; títulos en Open Sauce One; isotipo en `plantillas/assets/official/`.
+- Marca oficial (Manual de identidad 2024): `#009481`, `#5ac3b7`, `#121a22`; títulos en Open Sauce One Bold y textos en Roboto (`plantillas/assets/official/fonts/`); isotipo en `plantillas/assets/official/`.
 - Voz en off: ElevenLabs, voz **Pablo Rosete** (`ZpHPHPi1Mi7JR15GRhqv`), modelo `eleven_v4`.
 - Ritmo (plan Free de Metricool, máx. 20 programadas al mes): **2 reels + 2 posts por semana**. Historias directo en Instagram.
+
+Calendario: [`calendario.md`](calendario.md) · Guía de producción: [`GUIA.md`](GUIA.md)
 
 ## Estructura
 
