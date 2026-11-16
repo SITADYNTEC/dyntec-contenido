@@ -1,0 +1,40 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="brand.css">
+<style>
+.story{width:1080px;height:1920px;position:relative;overflow:hidden;background:var(--dark);color:#fff}
+.sheet{position:absolute;left:-40px;right:-40px;top:250px;height:560px;display:grid;grid-template-columns:repeat(7,1fr);gap:6px;transform:rotate(-6deg);opacity:.5}
+.sheet div{background:#1F2A33;border-radius:6px;font-size:22px;color:#5D6E78;display:flex;align-items:center;padding-left:14px;height:64px;font-family:'DejaVu Sans Mono',monospace}
+.sheet .r{color:#E46A5E}
+.sheet:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,27,33,0) 30%,var(--dark) 95%)}
+.txt{position:absolute;left:90px;right:90px;top:640px}
+.kicker{color:var(--teal2);font-size:28px;margin-bottom:34px}
+h1{font-size:118px;line-height:1.02;font-weight:800;letter-spacing:-.03em}
+h1 em{font-style:normal;color:var(--mint)}
+.poll{position:absolute;left:0;right:0;top:1130px;height:300px}
+.bottom{position:absolute;left:0;right:0;bottom:0;height:520px}
+.bottom .fill{position:absolute;top:100px;left:0;right:0;bottom:0;background:var(--teal)}
+.bottom p{position:absolute;left:90px;right:90px;top:170px;font-size:38px;line-height:1.35;font-weight:600}
+.mark{position:absolute;left:90px;bottom:380px;display:flex;align-items:center;gap:14px;font-weight:700;letter-spacing:.12em;font-size:28px}
+.mark img{height:54px}
+</style></head><body>
+<div class="story">
+  <div class="sheet">
+    <div>A1</div><div>=SUMA(</div><div>#REF!</div><div class="r">#¡VALOR!</div><div>v_final</div><div>v_final2</div><div>??</div>
+    <div>pedido</div><div>1,250</div><div class="r">#N/A</div><div>copia</div><div>40</div><div>120</div><div>=B4*</div>
+    <div>enero</div><div>REVISAR</div><div>12</div><div>no tocar</div><div class="r">#REF!</div><div>0</div><div>?</div>
+    <div>caja</div><div>3,400</div><div>falta</div><div>=C9</div><div>ok?</div><div>8</div><div class="r">#DIV/0!</div>
+    <div>total</div><div>pend.</div><div>v3_bueno</div><div>15</div><div>x</div><div>=E2+</div><div>final</div>
+    <div>notas</div><div>…</div><div>…</div><div>…</div><div>…</div><div>…</div><div>…</div>
+  </div>
+  <div class="txt">
+    <div class="kicker">Pregunta rápida</div>
+    <h1>¿Tu negocio todavía corre en <em>Excel</em>?</h1>
+  </div>
+  <div class="poll"></div>
+  <div class="bottom">
+    <svg viewBox="0 0 1080 120" preserveAspectRatio="none" style="position:absolute;top:0;left:0;width:100%;height:102px"><path d="M0,90 C320,0 720,140 1080,30 L1080,120 L0,120 Z" fill="#009481"/></svg>
+    <div class="fill"></div>
+    <p>Mañana te enseñamos cómo se ve cuando deja de hacerlo.</p>
+  </div>
+  <div class="mark" style="bottom:200px;left:auto;right:90px;z-index:2"><img src="assets/official/iso_blanco.png">DYNTEC</div>
+</div>
+</body></html>

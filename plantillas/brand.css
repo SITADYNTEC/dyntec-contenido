@@ -1,0 +1,12 @@
+@font-face{font-family:'Open Sauce One';src:url('assets/official/opensauce500.ttf');font-weight:100 900}
+:root{--dark:#121a22;--dark2:#1C252D;--teal:#009481;--teal2:#5ac3b7;--mint:#5ac3b7;--paper:#F4FAF9;--ink:#0F1A1E}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#333;font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased}
+.kicker{font-style:italic;text-transform:uppercase;letter-spacing:.32em;font-weight:500}
+.logo{display:flex;flex-direction:column;align-items:center;gap:10px}
+.logo img{height:96px}
+.logo span{font-weight:700;letter-spacing:.12em;font-size:26px}
+.card{background:#fff;border-radius:28px;box-shadow:0 30px 60px rgba(0,0,0,.28);color:var(--ink)}
+.chip{display:inline-block;padding:8px 18px;border-radius:999px;font-weight:600;font-size:22px}
+
+h1,h2,h4,h5,.center,.cta,.tile,.step,.logo span,.mark{font-family:'Open Sauce One','Inter',sans-serif}

@@ -1,0 +1,134 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="brand.css"><link rel="stylesheet" href="reel_base.css">
+<style>
+.kred{color:#E46A5E!important}
+.files{position:absolute;left:0;right:0;top:820px;height:760px}
+.file{position:absolute;left:50%;width:600px;margin-left:-300px;background:#fff;color:var(--ink);border-radius:22px;padding:26px 30px;font-size:32px;font-weight:600;display:flex;align-items:center;gap:22px;box-shadow:0 16px 36px rgba(0,0,0,.35)}
+.file i{width:56px;height:66px;border-radius:8px;background:#1D7044;color:#fff;font-style:normal;font-size:22px;font-weight:800;display:flex;align-items:center;justify-content:center;flex:none}
+.count{position:absolute;left:0;right:0;top:1520px;text-align:center;font-family:'Open Sauce One';font-size:60px;font-weight:700;color:#E46A5E}
+.wa{background:#ECE5DD!important}
+.wb{background:#fff;border-radius:22px;padding:16px 22px;font-size:28px;margin-top:14px;max-width:80%;box-shadow:0 2px 0 rgba(0,0,0,.06)}
+.wb b{display:block;font-size:20px;color:#1F7A68;margin-bottom:4px}
+.badge{position:absolute;right:28px;top:28px;background:#E46A5E;color:#fff;font-weight:800;font-size:30px;border-radius:999px;padding:8px 20px}
+.big3{position:absolute;left:90px;right:90px;top:780px;font-family:'Open Sauce One';font-size:112px;font-weight:700;line-height:1.1;letter-spacing:-.03em}
+.big3 span{display:block}
+.inv{display:flex;align-items:center;gap:18px;font-size:28px;padding:18px 0;border-bottom:2px solid #EEF2F2}
+.inv span{width:190px}
+.inv .tr{flex:1;height:22px;background:#EEF2F2;border-radius:11px;overflow:hidden}
+.inv .tr i{display:block;height:100%;background:var(--teal);border-radius:11px}
+.inv b{width:80px;text-align:right;font-variant-numeric:tabular-nums}
+.mail{position:absolute;left:100px;right:100px;top:820px;padding:34px 36px;z-index:3}
+.mail .from{font-size:22px;color:#7A8C90}
+.mail h4{font-size:36px;margin-top:8px}
+.mbars{display:flex;align-items:flex-end;gap:14px;height:200px;margin-top:26px}
+.mbars i{flex:1;background:var(--teal);border-radius:8px 8px 0 0}
+.mstat{display:flex;gap:16px;margin-top:22px}
+.mstat div{flex:1;background:#F2F6F6;border-radius:16px;padding:16px 18px;font-size:20px;color:#7A8C90}
+.mstat b{display:block;font-size:36px;color:var(--ink);font-family:'Open Sauce One'}
+</style></head><body>
+<div id="stage">
+  <div id="wave"><svg viewBox="0 0 1080 140" preserveAspectRatio="none"><path id="wp" d="" fill="#009481"/></svg><div class="fill"></div></div>
+
+  <div class="scene" id="s1">
+    <div class="head"><div class="kicker kred">Antes · lunes 9:00</div><h2>Un lunes con <em style="color:#E46A5E">Excel</em></h2></div>
+    <div class="files" id="files"></div>
+    <div class="count" id="cnt">0 archivos</div>
+  </div>
+
+  <div class="scene" id="s2">
+    <div class="head"><div class="kicker kred">Antes · lunes 9:20</div><h2>Y el WhatsApp lleno de <em style="color:#E46A5E">"¿ya quedó?"</em></h2></div>
+    <div class="phone"><div class="screen wa">
+      <div class="badge" id="wbadge">0</div>
+      <h5>Pedidos sucursales 🛒</h5><div class="sub">12 participantes</div>
+      <div id="wlist"></div>
+    </div></div>
+  </div>
+
+  <div class="scene" id="s3">
+    <div class="head" style="top:1060px;text-align:center"><div class="kicker" style="color:#fff">Después · lunes 9:00</div><h2 style="font-size:130px">Un lunes con <em style="color:var(--dark)">sistema</em></h2></div>
+  </div>
+
+  <div class="scene" id="s4">
+    <div class="head"><div class="kicker">Después · lunes 9:00</div><h2>Los pedidos llegan <em>validados</em></h2></div>
+    <div class="phone"><div class="screen">
+      <h5>Pedidos de hoy</h5><div class="sub">Revisados contra inventario y crédito</div>
+      <div class="slot" id="o1">Sucursal Centro<span class="chip ok">✓ Validado</span></div>
+      <div class="slot" id="o2">Sucursal Norte<span class="chip ok">✓ Validado</span></div>
+      <div class="slot" id="o3">Sucursal Sur<span class="chip ok">✓ Validado</span></div>
+      <div class="slot" id="o4">Sucursal Oriente<span class="chip ok">✓ Validado</span></div>
+    </div></div>
+  </div>
+
+  <div class="scene" id="s5">
+    <div class="head"><div class="kicker">Después · lunes 9:00</div><h2>El inventario se <em>actualiza solo</em></h2></div>
+    <div class="phone"><div class="screen">
+      <div style="display:flex;justify-content:space-between;align-items:center"><h5>Inventario</h5><span class="chip ok" id="s5c">En vivo</span></div>
+      <div style="margin-top:16px">
+        <div class="inv"><span>Producto A</span><div class="tr"><i data-a="80" data-b="62"></i></div><b data-a="160" data-b="124">160</b></div>
+        <div class="inv"><span>Producto B</span><div class="tr"><i data-a="45" data-b="71"></i></div><b data-a="90" data-b="142">90</b></div>
+        <div class="inv"><span>Producto C</span><div class="tr"><i data-a="30" data-b="18"></i></div><b data-a="60" data-b="36">60</b></div>
+        <div class="inv"><span>Producto D</span><div class="tr"><i data-a="66" data-b="54"></i></div><b data-a="132" data-b="108">132</b></div>
+      </div>
+      <div style="margin-top:26px;font-size:24px;color:#1F7A68;font-weight:700">✓ Se descuenta con cada venta y cada traspaso</div>
+    </div></div>
+  </div>
+
+  <div class="scene" id="s6">
+    <div class="head"><div class="kicker">Después · lunes 8:00</div><h2>El reporte ya está <em>en tu correo</em></h2></div>
+    <div class="mail card" id="mail">
+      <div class="from">De: Sistema Dyntec · Lun 8:00</div>
+      <h4>Reporte semanal de ventas</h4>
+      <div class="mbars" id="mbars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="mstat"><div><b id="m1">0%</b>vs. semana anterior</div><div><b id="m2">0</b>pedidos</div><div><b id="m3">0</b>alertas</div></div>
+    </div>
+  </div>
+
+  <div class="scene" id="s7">
+    <div class="big3"><span id="t1">Misma gente.</span><span id="t2">Mismo negocio.</span><span id="t3" style="color:var(--mint)">Distinto lunes.</span></div>
+  </div>
+
+  <div class="scene" id="s8">
+    <div class="biglogo"><img src="assets/official/iso_blanco.png"><div>DYNTEC</div></div>
+    <div class="center">Tu negocio,<br><em>en automático.</em></div>
+  </div>
+
+  <div class="scene" id="s9">
+    <div class="biglogo" style="top:420px"><img src="assets/official/iso_blanco.png" style="height:220px"><div style="font-size:52px">DYNTEC</div></div>
+    <div class="center" style="top:900px;font-size:76px">Cámbiale el lunes <em>a tu equipo</em></div>
+    <div class="cta" id="cta"><i></i>WhatsApp</div>
+    <div class="num">222 352 6054</div>
+    <div class="web">dyntec.com.mx</div>
+  </div>
+</div>
+<script src="reel_base.js"></script>
+<script>
+window.T = window.T || [0,4.0,6.6,8.3,10.2,12.3,15.6,19.0,21.8,25.0];
+const LV=[200,200,1000,520,520,520,0,1500,1500];
+const names=['pedido.xlsx','pedido_final.xlsx','pedido_final2.xlsx','pedido_FINAL_bueno.xlsx','inventario_lunes.xlsx','inventario_lunes (1).xlsx','caja_sem45.xlsx','precios_NO_TOCAR.xlsx','pedido_final2 (copia).xlsx','reporte_v3.xlsx'];
+const files=document.getElementById('files');
+names.forEach((n,j)=>{const d=document.createElement('div');d.className='file';d.innerHTML='<i>X</i>'+n;d.style.top=(j*64)+'px';d.dataset.r=((j*37)%11-5);files.appendChild(d)});
+const msgs=[['Juan · Norte','¿Ya quedó el pedido?'],['Ana · Centro','¿Cuál es el Excel bueno?'],['Luis · Sur','¿Ya quedó?'],['Ana · Centro','¿¿Ya quedó??'],['Pedro · Oriente','Yo mandé el mío ayer 🙃']];
+const wl=document.getElementById('wlist');
+msgs.forEach(m=>{const d=document.createElement('div');d.className='wb';d.innerHTML='<b>'+m[0]+'</b>'+m[1];wl.appendChild(d)});
+const mb=[...document.querySelectorAll('#mbars i')],mh=[45,60,52,70,64,85,92];
+function anim(t,T){
+  {const lt=t-T[0];const fs=[...files.children];let n=0;
+   fs.forEach((f,j)=>{const d=0.5+j*0.3;const k=back((lt-d)/0.35);f.style.opacity=clamp((lt-d)/0.1);f.style.transform=`translateY(${(1-k)*-200}px) rotate(${f.dataset.r*k}deg)`;if(lt>d)n++});
+   document.getElementById('cnt').textContent=n+(n==1?' archivo':' archivos');rise(document.getElementById('cnt'),lt-0.5,20);}
+  {const lt=t-T[1];const bs=[...wl.children];let n=0;bs.forEach((b,j)=>{const d=0.4+j*0.38;rise(b,lt-d,20);if(lt>d)n++});
+   document.getElementById('wbadge').textContent=Math.max(0,n*9+Math.floor(clamp(lt-0.4)*2));}
+  {const lt=t-T[2];const h=document.querySelector('#s3 .head');h.style.transform=`translateY(${(1-ease(lt/0.5))*60}px) scale(${0.9+0.1*back(lt/0.5)})`;}
+  {const lt=t-T[3];['o1','o2','o3','o4'].forEach((id,j)=>{const e=document.getElementById(id);rise(e,lt-0.4-j*0.22,20);pop(e.querySelector('.chip'),lt-0.6-j*0.22)});}
+  {const lt=t-T[4];const k=ease((lt-0.7)/0.9);
+   document.querySelectorAll('#s5 .tr i').forEach(i=>i.style.width=(+i.dataset.a+(i.dataset.b-i.dataset.a)*k)+'%');
+   document.querySelectorAll('#s5 .inv b').forEach(b=>b.textContent=Math.round(+b.dataset.a+(b.dataset.b-b.dataset.a)*k));
+   pop(document.getElementById('s5c'),lt-0.3);}
+  {const lt=t-T[5];const m=document.getElementById('mail');m.style.transform=`translateY(${(1-back((lt-0.3)/0.6))*-500}px)`;m.style.opacity=clamp((lt-0.3)/0.15);
+   mb.forEach((b,j)=>b.style.height=(mh[j]*ease((lt-0.9-j*0.07)/0.6))+'%');
+   const k=ease((lt-1.0)/1.0);document.getElementById('m1').textContent='+'+Math.round(12*k)+'%';document.getElementById('m2').textContent=Math.round(318*k);document.getElementById('m3').textContent=Math.round(2*k);}
+  {const lt=t-T[6];['t1','t2','t3'].forEach((id,j)=>rise(document.getElementById(id),lt-[0.15,1.15,2.3][j],40));}
+  {const lt=t-T[7];document.querySelector('#s8 .biglogo').style.transform=`translateX(-50%) scale(${0.7+0.3*back(lt/0.6)})`;rise(document.querySelector('#s8 .center'),lt-0.4);}
+  {const lt=t-T[8];document.querySelector('#s9 .biglogo').style.transform=`translateX(-50%) scale(${0.7+0.3*back(lt/0.5)})`;
+   document.getElementById('cta').style.transform=`translateX(-50%) scale(${(0.6+0.4*back((lt-0.3)/0.5))*(1+0.04*Math.sin(lt*6))})`;}
+}
+render(0);
+</script></body></html>

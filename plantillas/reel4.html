@@ -1,0 +1,177 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="brand.css"><link rel="stylesheet" href="reel_base.css">
+<style>
+#grid{position:absolute;inset:0;background-image:linear-gradient(rgba(90,195,183,.09) 2px,transparent 2px),linear-gradient(90deg,rgba(90,195,183,.09) 2px,transparent 2px);background-size:60px 60px;opacity:0}
+.clock{position:absolute;left:0;right:0;top:300px;text-align:center;font-family:'Open Sauce One';font-size:230px;letter-spacing:-.04em;line-height:1}
+.clock small{display:block;font-size:40px;letter-spacing:.3em;color:var(--teal2);margin-top:20px;font-family:'Inter';font-style:italic;text-transform:uppercase}
+.notif{position:absolute;left:90px;right:90px;top:840px;background:rgba(255,255,255,.95);color:var(--ink);border-radius:36px;padding:30px 34px;box-shadow:0 30px 60px rgba(0,0,0,.4)}
+.notif .app{display:flex;align-items:center;gap:14px;font-size:24px;color:#6B7C86;font-weight:600}
+.notif .app i{width:40px;height:40px;border-radius:10px;background:#25D366;display:inline-block}
+.notif p{font-size:34px;margin-top:14px;line-height:1.35}
+.notif b{font-size:30px;display:block;margin-top:8px}
+.closed{position:absolute;left:0;right:0;top:1280px;text-align:center}
+.q{position:absolute;left:90px;right:90px;top:560px;text-align:center;font-family:'Open Sauce One';font-size:130px;line-height:1.05;letter-spacing:-.03em}
+/* rayos x */
+.xwrap{position:absolute;left:50%;top:700px;width:600px;margin-left:-300px;height:900px}
+.xph{position:absolute;inset:0;border-radius:64px;padding:22px}
+.xph.real{background:#0E1418;box-shadow:0 40px 80px rgba(0,0,0,.45)}
+.xph.real .screen{height:100%}
+.xph.wire{border:4px solid var(--mint);background:rgba(90,195,183,.05)}
+.xph.wire .w{border:3px dashed rgba(90,195,183,.6);border-radius:44px;height:100%;position:relative;padding:40px 34px;color:var(--mint);font-family:'DejaVu Sans Mono',monospace;font-size:31px;line-height:1.75}
+.xscan{position:absolute;left:-60px;right:-60px;height:10px;background:var(--mint);box-shadow:0 0 50px 10px rgba(90,195,183,.7);z-index:3}
+.hl{border-radius:8px;padding:0 4px;transition:none}
+.msgx{font-size:46px;line-height:1.45;font-family:'Inter';color:#fff;position:absolute;left:90px;right:90px;top:720px;background:#1C252D;border-radius:36px;padding:36px 40px}
+.tags{position:absolute;left:90px;right:90px;top:1150px;display:flex;flex-direction:column;gap:22px}
+.tag{display:flex;align-items:center;gap:20px;font-size:38px;font-weight:600}
+.tag span{font-family:'DejaVu Sans Mono',monospace;color:var(--mint);font-size:30px;width:300px}
+.tag b{background:#fff;color:var(--ink);border-radius:18px;padding:12px 24px}
+.brain{position:absolute;left:50%;top:1020px;width:190px;height:190px;margin-left:-95px;border-radius:50%;background:#1C252D;border:4px solid var(--mint);display:flex;align-items:center;justify-content:center;z-index:2}
+.brain img{height:110px}
+.dcard{position:absolute;width:420px;background:#fff;color:var(--ink);border-radius:26px;padding:24px 28px;box-shadow:0 20px 40px rgba(0,0,0,.35);z-index:2}
+.dcard small{font-family:'DejaVu Sans Mono',monospace;color:var(--teal);font-size:22px;font-weight:700;letter-spacing:.06em}
+.dcard div{font-size:28px;margin-top:8px;line-height:1.35}
+.pulse{position:absolute;width:22px;height:22px;border-radius:50%;background:var(--mint);box-shadow:0 0 20px var(--mint);margin:-11px 0 0 -11px;z-index:1}
+.timer{position:absolute;right:30px;top:30px}
+.lead{position:absolute;left:90px;right:90px;top:760px;padding:36px 40px}
+.lead li{font-size:30px;line-height:1.4;margin:10px 0 0 34px}
+.toast{position:absolute;left:120px;right:120px;top:1330px;background:#1C252D;border:3px solid var(--mint);border-radius:28px;padding:26px 30px;font-size:30px;display:flex;gap:20px;align-items:center}
+.toast i{width:64px;height:64px;border-radius:50%;background:var(--teal2);flex:none;display:flex;align-items:center;justify-content:center;font-style:normal;font-weight:800;color:var(--dark);font-size:30px}
+.browser{position:absolute;left:60px;top:780px;width:560px;height:620px;background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,.4);color:var(--ink)}
+.browser .bar{height:56px;background:#E8EEEE;display:flex;align-items:center;gap:10px;padding:0 20px}
+.browser .bar i{width:16px;height:16px;border-radius:50%;background:#C9D3D3}
+.browser .url{margin-left:14px;background:#fff;border-radius:10px;padding:6px 16px;font-size:20px;color:#6B7C86}
+.widget{position:absolute;right:20px;bottom:20px;width:330px;background:#fff;border-radius:22px;box-shadow:0 10px 30px rgba(0,0,0,.25);overflow:hidden}
+.widget .wh{background:var(--dark);color:#fff;padding:16px 18px;font-size:22px;font-weight:700;display:flex;align-items:center;gap:10px}
+.widget .wh em{font-style:normal;font-size:16px;color:var(--mint);font-weight:500}
+.wa2{position:absolute;right:60px;top:860px;width:360px;background:#0E1418;border-radius:48px;padding:16px;box-shadow:0 30px 60px rgba(0,0,0,.4)}
+.wa2 .sc{background:#ECE5DD;border-radius:36px;height:560px;padding:24px 18px}
+.wa2 .hd{background:#075E54;color:#fff;border-radius:18px;padding:14px 16px;font-size:22px;font-weight:700}
+.bb{border-radius:18px;padding:12px 16px;font-size:20px;margin-top:12px;max-width:90%;line-height:1.3}
+</style></head><body>
+<div id="stage">
+  <div id="grid"></div>
+  <div id="wave"><svg viewBox="0 0 1080 140" preserveAspectRatio="none"><path id="wp" d="" fill="#009481"/></svg><div class="fill"></div></div>
+
+  <div class="scene" id="s1">
+    <div class="clock" id="clk">11:47<small>p.m. · martes</small></div>
+    <div class="notif" id="nt"><div class="app"><i></i>WhatsApp · ahora</div><b>Cliente nuevo</b><p>hola cuanto cuesta la casa de la col centro?? se puede ver mañana</p></div>
+  </div>
+
+  <div class="scene" id="s2">
+    <div class="q">¿Quién le <em style="font-style:normal;color:var(--mint)">contesta</em>?</div>
+    <div class="closed"><span class="chip alert" style="font-size:34px;padding:16px 30px">Oficina cerrada · abre 9:00 a.m.</span></div>
+  </div>
+
+  <div class="scene" id="s3">
+    <div class="head" style="text-align:center"><div class="kicker">Mira por dentro</div><h2>Rayos X de un <em>chatbot</em></h2></div>
+    <div class="xwrap">
+      <div class="xph wire"><div class="w">intent: "precio" + "visita"<br>zona: "Centro"<br>fecha: mañana<br>→ consultar inventario<br>→ consultar agenda<br>→ responder<br>→ agendar visita<br>→ crear lead en CRM</div></div>
+      <div class="xph real" id="real"><div class="screen" style="background:#ECE5DD">
+        <div style="background:#075E54;color:#fff;border-radius:22px;padding:18px 22px;font-size:26px;font-weight:700">Inmobiliaria · Asistente</div>
+        <div class="msg in" style="background:#fff;margin-top:30px">hola cuanto cuesta la casa de la col centro?? se puede ver mañana</div>
+      </div></div>
+      <div class="xscan" id="scan"></div>
+    </div>
+  </div>
+
+  <div class="scene" id="s4">
+    <div class="head"><div class="kicker">Paso 1</div><h2><em>Entiende</em> lo que te piden</h2></div>
+    <div class="msgx">hola <span class="hl" id="h1">cuanto cuesta</span> la casa de la <span class="hl" id="h2">col centro</span>?? <span class="hl" id="h3">se puede ver mañana</span></div>
+    <div class="tags">
+      <div class="tag" id="g1"><span>intención</span><b>Precio + visita</b></div>
+      <div class="tag" id="g2"><span>zona</span><b>Centro</b></div>
+      <div class="tag" id="g3"><span>cuándo</span><b>Mañana</b></div>
+    </div>
+  </div>
+
+  <div class="scene" id="s5">
+    <div class="head"><div class="kicker">Paso 2</div><h2>Consulta tus <em>datos reales</em></h2></div>
+    <svg style="position:absolute;inset:0;width:1080px;height:1920px"><g stroke="rgba(90,195,183,.6)" stroke-width="5" fill="none"><path id="L1" d="M540,1115 L300,820"/><path id="L2" d="M540,1115 L780,820"/><path id="L3" d="M540,1115 L540,1440"/></g></svg>
+    <div class="brain" id="brain"><img src="assets/official/iso_blanco.png"></div>
+    <div class="dcard" id="d1" style="left:60px;top:640px"><small>INVENTARIO</small><div>Casa Centro · 3 rec.<br><b>$2.4 M · Disponible</b></div></div>
+    <div class="dcard" id="d2" style="right:60px;top:640px"><small>AGENDA</small><div>Mañana<br><b>10:00 y 13:00 libres</b></div></div>
+    <div class="dcard" id="d3" style="left:330px;top:1440px"><small>POLÍTICAS</small><div>Visitas de 45 min<br><b>Con asesor asignado</b></div></div>
+    <div class="pulse" id="pu1"></div><div class="pulse" id="pu2"></div><div class="pulse" id="pu3"></div>
+  </div>
+
+  <div class="scene" id="s6">
+    <div class="head"><div class="kicker">Paso 3</div><h2>Responde y <em>agenda</em></h2></div>
+    <div class="phone"><div class="screen" style="background:#ECE5DD">
+      <span class="chip ok timer" id="tm">⏱ 3 s</span>
+      <div class="msg in" style="background:#fff;font-size:26px;margin-top:70px">hola cuanto cuesta la casa de la col centro?? se puede ver mañana</div>
+      <div class="msg" style="background:#DCF8C6;margin-left:auto;font-size:26px" id="bot"><span id="bt"></span></div>
+      <div class="msg in" style="background:#fff;font-size:26px" id="u2">a las 10 porfa 🙏</div>
+      <div style="text-align:center;margin-top:20px"><span class="chip ok" id="ag">✓ Visita agendada · mañana 10:00</span></div>
+    </div></div>
+  </div>
+
+  <div class="scene" id="s7">
+    <div class="head"><div class="kicker">Paso 4</div><h2>Pasa a tu equipo <em>con el resumen</em></h2></div>
+    <div class="lead card" id="lead">
+      <div style="display:flex;justify-content:space-between;align-items:center"><h4 style="font-size:36px">Lead nuevo · CRM</h4><span class="chip ok">Caliente</span></div>
+      <ul id="lul">
+        <li>Interesado en: Casa Centro</li>
+        <li>Preguntó: precio y visita</li>
+        <li>Visita: mañana 10:00</li>
+        <li>Canal: WhatsApp · 11:47 p.m.</li>
+      </ul>
+    </div>
+    <div class="toast" id="toast"><i>L</i><div><b>Laura, asesora</b><br><span style="font-size:26px;color:#C9D6D9">Te asignaron un lead con visita mañana</span></div></div>
+  </div>
+
+  <div class="scene" id="s8">
+    <div class="head"><h2>En tu web o en <em>WhatsApp</em>, a cualquier hora</h2></div>
+    <div class="browser" id="br"><div class="bar"><i></i><i></i><i></i><span class="url">tunegocio.com.mx</span></div>
+      <div style="padding:30px;font-size:30px;font-weight:700">Tu sitio web</div>
+      <div class="widget"><div class="wh"><img src="assets/official/iso_blanco.png" style="height:30px">Asistente <em>● En línea</em></div>
+        <div style="padding:14px 16px"><div class="bb" style="background:#F0F3F3">¡Hola! ¿En qué te ayudo?</div><div class="bb" style="background:#E3F6F2;margin-left:auto">Quiero cotizar</div></div></div>
+    </div>
+    <div class="wa2" id="wa"><div class="sc"><div class="hd">Tu negocio ✓</div>
+      <div class="bb" style="background:#fff">¿Tienen lugar el sábado?</div>
+      <div class="bb" style="background:#DCF8C6;margin-left:auto">¡Sí! 10:00 o 12:00. ¿Te aparto uno?</div></div></div>
+  </div>
+
+  <div class="scene" id="s9">
+    <div class="biglogo"><img src="assets/official/iso_blanco.png"><div>DYNTEC</div></div>
+    <div class="center">Tu negocio,<br><em>en automático.</em></div>
+  </div>
+
+  <div class="scene" id="s10">
+    <div class="biglogo" style="top:380px"><img src="assets/official/iso_blanco.png" style="height:200px"><div style="font-size:50px">DYNTEC</div></div>
+    <div class="center" style="top:860px;font-size:80px">Pruébalo tú: <em>escríbele al nuestro</em></div>
+    <div class="cta" id="cta" style="top:1200px"><i></i>dyntec.com.mx</div>
+    <div class="num" style="top:1400px">o por WhatsApp: 222 352 6054</div>
+  </div>
+</div>
+<script src="reel_base.js"></script>
+<script>
+window.T = window.T || [0,4.8,6.3,9.3,13.0,17.5,21.0,26.5,29.3,32.0,35.5];
+const LV=[0,0,0,0,0,0,0,520,1500,1500];
+const botText='¡Hola! La casa en Centro está en $2.4 M y sigue disponible. Mañana tengo libre 10:00 o 13:00, ¿cuál te aparto?';
+const Ls=['L1','L2','L3'].map(id=>document.getElementById(id));Ls.forEach(p=>{p.dataset.L=p.getTotalLength();p.style.strokeDasharray=p.dataset.L});
+function anim(t,T){
+  // grid: visible en modo rayos X (escenas 3 a 7)
+  document.getElementById('grid').style.opacity=clamp((t-T[2]-0.4)/0.6)*(1-clamp((t-T[7])/0.5));
+  {const lt=t-T[0];const c=document.getElementById('clk');c.style.opacity=ease(lt/0.6);
+   const n=document.getElementById('nt');n.style.transform=`translateY(${(1-back((lt-2.6)/0.6))*-700}px)`;n.style.opacity=clamp((lt-2.6)/0.15);}
+  {const lt=t-T[1];const q=document.querySelector('#s2 .q');q.style.transform=`scale(${0.85+0.15*back(lt/0.5)})`;pop(document.querySelector('#s2 .closed .chip'),lt-0.5);}
+  {const lt=t-T[2];const p=clamp((lt-0.7)/1.8);const y=p*900;
+   document.getElementById('real').style.clipPath=`inset(${y}px 0 0 0)`;
+   const sc=document.getElementById('scan');sc.style.top=(y-5)+'px';sc.style.opacity=(p>0&&p<1)?1:0;}
+  {const lt=t-T[3];['h1','h2','h3'].forEach((id,j)=>{const e=document.getElementById(id);const on=lt>0.6+j*0.45;e.style.background=on?'rgba(90,195,183,.35)':'transparent';e.style.boxShadow=on?'inset 0 -5px 0 #5ac3b7':'none'});
+   ['g1','g2','g3'].forEach((id,j)=>{const e=document.getElementById(id);e.style.opacity=ease((lt-0.8-j*0.45)/0.3);e.style.transform=`translateX(${(1-ease((lt-0.8-j*0.45)/0.3))*-80}px)`});}
+  {const lt=t-T[4];document.getElementById('brain').style.transform=`scale(${back(lt/0.5)})`;
+   Ls.forEach((p,j)=>p.style.strokeDashoffset=p.dataset.L*(1-ease((lt-0.4-j*0.35)/0.5)));
+   ['d1','d2','d3'].forEach((id,j)=>pop(document.getElementById(id),lt-0.8-j*0.35));
+   Ls.forEach((p,j)=>{const pu=document.getElementById('pu'+(j+1));const L=+p.dataset.L;const ph=((lt-1.6-j*0.2)*0.9)%1;
+     if(lt<1.6){pu.style.opacity=0;return}const pt=p.getPointAtLength(L*(1-ph));pu.style.left=pt.x+'px';pu.style.top=pt.y+'px';pu.style.opacity=1});}
+  {const lt=t-T[5];const n=Math.floor(clamp((lt-0.6)/1.4)*botText.length);document.getElementById('bt').textContent=botText.slice(0,n);
+   document.getElementById('bot').style.opacity=lt>0.5?1:0;rise(document.getElementById('u2'),lt-2.3,20);pop(document.getElementById('ag'),lt-2.8);pop(document.getElementById('tm'),lt-2.1);}
+  {const lt=t-T[6];rise(document.getElementById('lead'),lt-0.3,80);document.querySelectorAll('#lul li').forEach((l,j)=>{l.style.opacity=ease((lt-0.8-j*0.4)/0.3)});
+   const ts=document.getElementById('toast');ts.style.transform=`translateY(${(1-back((lt-2.2)/0.5))*300}px)`;ts.style.opacity=clamp((lt-2.2)/0.15);}
+  {const lt=t-T[7];rise(document.getElementById('br'),lt-0.2,200);rise(document.getElementById('wa'),lt-0.6,200);}
+  {const lt=t-T[8];document.querySelector('#s9 .biglogo').style.transform=`translateX(-50%) scale(${0.7+0.3*back(lt/0.6)})`;rise(document.querySelector('#s9 .center'),lt-0.4);}
+  {const lt=t-T[9];document.querySelector('#s10 .biglogo').style.transform=`translateX(-50%) scale(${0.7+0.3*back(lt/0.5)})`;
+   document.getElementById('cta').style.transform=`translateX(-50%) scale(${(0.6+0.4*back((lt-0.3)/0.5))*(1+0.04*Math.sin(lt*6))})`;}
+}
+render(0);
+</script></body></html>

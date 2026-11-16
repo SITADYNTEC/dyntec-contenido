@@ -1,0 +1,217 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="brand.css">
+<style>
+#stage{width:1080px;height:1920px;position:relative;overflow:hidden;background:var(--dark);color:#fff}
+#wave{position:absolute;left:0;right:0;bottom:0}
+#wave svg{position:absolute;top:0;left:0;width:100%;height:140px}
+#wave .fill{position:absolute;top:138px;left:0;right:0;bottom:0;background:var(--teal)}
+.scene{position:absolute;inset:0;opacity:0}
+.head{position:absolute;left:90px;right:90px;top:250px}
+.head .kicker{color:var(--teal2);font-size:30px;margin-bottom:26px}
+.head h2{font-size:104px;line-height:1.02;font-weight:800;letter-spacing:-.03em}
+.head h2 em{font-style:normal;color:var(--mint)}
+.phone{position:absolute;left:50%;top:760px;width:640px;margin-left:-320px;background:#0E1418;border-radius:64px;padding:22px;box-shadow:0 40px 80px rgba(0,0,0,.45)}
+.screen{background:#fff;border-radius:46px;padding:44px 40px;color:var(--ink);height:760px;position:relative;overflow:hidden}
+.screen h5{font-size:34px;font-weight:700}
+.screen .sub{font-size:24px;color:#7A8C90;margin-top:6px}
+.chip{display:inline-block;padding:10px 22px;border-radius:999px;font-weight:700;font-size:26px}
+.ok{background:#E3F6F2;color:#1F7A68}.alert{background:#FFF0E3;color:#B4580E}
+.slot{display:flex;justify-content:space-between;align-items:center;font-size:30px;padding:24px 26px;border-radius:20px;background:#F2F6F6;margin-top:18px;font-weight:600}
+.slot.on{background:#1C252D;color:#fff}
+.row{display:flex;justify-content:space-between;font-size:30px;padding:22px 4px;border-bottom:2px solid #EEF2F2}
+.row b{font-variant-numeric:tabular-nums}
+/* s1 */
+.cells{position:absolute;left:-60px;right:-60px;top:760px;display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.cells div{height:90px;border-radius:10px;background:#1F2A33;font-family:'DejaVu Sans Mono',monospace;font-size:26px;color:#6B7C86;display:flex;align-items:center;padding-left:16px;white-space:nowrap;overflow:hidden}
+.cells .r{color:#E46A5E}
+.bubble{position:absolute;background:#25D366;color:#073B1E;font-weight:700;font-size:30px;padding:20px 28px;border-radius:28px 28px 28px 6px}
+.l1,.l2,.l3{display:block}
+/* s2/s9 */
+.biglogo{position:absolute;left:50%;top:560px;transform:translateX(-50%);text-align:center}
+.biglogo img{height:300px}
+.biglogo div{font-size:64px;font-weight:700;letter-spacing:.14em;margin-top:24px}
+.center{position:absolute;left:90px;right:90px;top:1120px;text-align:center;font-size:84px;font-weight:800;line-height:1.05;letter-spacing:-.02em}
+.center em{font-style:normal;color:var(--dark)}
+/* qr */
+.qr{width:420px;height:420px;margin:30px auto 0;display:grid;grid-template-columns:repeat(21,1fr);position:relative}
+.qr i{display:block}
+.scan{position:absolute;left:-20px;right:-20px;height:8px;background:var(--mint);box-shadow:0 0 30px var(--mint)}
+/* chat */
+.msg{font-size:30px;line-height:1.35;padding:24px 28px;border-radius:30px;max-width:86%;margin-top:22px}
+.msg.in{background:#F0F3F3}
+.copi{background:#E3F6F2;border:3px solid var(--teal);border-radius:30px;padding:24px 28px;margin-top:30px;font-size:30px;line-height:1.35}
+.copi small{display:block;font-weight:700;color:var(--teal);font-size:24px;margin-bottom:10px;letter-spacing:.06em}
+/* steps */
+.steps{position:absolute;left:110px;right:110px;top:900px}
+.step{display:flex;align-items:center;gap:30px;font-size:46px;font-weight:700;margin-bottom:70px;color:#5D6E78}
+.step i{width:78px;height:78px;border-radius:50%;border:5px solid #3A4852;display:flex;align-items:center;justify-content:center;font-style:normal;font-size:38px}
+.step.on{color:#fff}.step.on i{background:var(--mint);border-color:var(--mint);color:var(--dark)}
+/* cta */
+.cta{position:absolute;left:50%;top:1180px;transform:translateX(-50%);display:flex;align-items:center;gap:22px;background:var(--dark);color:#fff;border-radius:999px;padding:40px 70px;font-size:50px;font-weight:800;white-space:nowrap}
+.cta i{width:30px;height:30px;border-radius:50%;background:#25D366}
+.num{position:absolute;left:0;right:0;top:1380px;text-align:center;font-size:52px;font-weight:700;color:#fff}
+.web{position:absolute;left:0;right:0;top:1460px;text-align:center;font-size:34px;color:#E6F7F3}
+</style></head><body>
+<div id="stage">
+  <div id="wave"><svg viewBox="0 0 1080 140" preserveAspectRatio="none"><path id="wp" d="" fill="#009481"/></svg><div class="fill"></div></div>
+
+  <div class="scene" id="s1">
+    <div class="head"><h2><span class="l1">¿Tu negocio todavía corre en</span> <span class="l2"><em>Excel, papel</em></span> <span class="l3">y WhatsApp?</span></h2></div>
+    <div class="cells" id="cells"></div>
+    <div class="bubble" id="b1" style="left:120px;top:1260px">¿Ya quedó el pedido?</div>
+    <div class="bubble" id="b2" style="left:470px;top:1400px">¿Quién tiene la versión final?</div>
+  </div>
+
+  <div class="scene" id="s2">
+    <div class="biglogo"><img src="assets/official/iso_blanco.png"><div>DYNTEC</div></div>
+    <div class="center">Lo convertimos en un sistema <em>a tu medida</em></div>
+  </div>
+
+  <div class="scene" id="s3">
+    <div class="head"><div class="kicker">Hoteles · clubes · gimnasios</div><h2>Reservas con <em>anticipo</em></h2></div>
+    <div class="phone"><div class="screen">
+      <h5>Sábado 21 · Bahía 4</h5><div class="sub">Elige tu horario</div>
+      <div class="slot">10:00<span>Disponible</span></div>
+      <div class="slot" id="s3slot">12:00<span>Disponible</span></div>
+      <div class="slot" style="opacity:.45">14:00<span>Ocupado</span></div>
+      <div style="margin-top:40px;text-align:center"><span class="chip ok" id="s3chip">✓ Anticipo pagado · OXXO</span></div>
+    </div></div>
+  </div>
+
+  <div class="scene" id="s4">
+    <div class="head"><div class="kicker">Cadenas con sucursales</div><h2>Pedidos que se <em>sugieren solos</em></h2></div>
+    <div class="phone"><div class="screen">
+      <h5>Pedido sugerido</h5><div class="sub">Sucursal Centro · con historial de ventas</div>
+      <div style="margin-top:20px">
+      <div class="row"><span>Producto A</span><b data-to="38">0</b></div>
+      <div class="row"><span>Producto B</span><b data-to="74">0</b></div>
+      <div class="row"><span>Producto C</span><b data-to="12">0</b></div>
+      <div class="row"><span>Producto D</span><b data-to="150">0</b></div>
+      </div>
+      <div style="margin-top:36px;text-align:center"><span class="chip ok" id="s4chip">Traspaso sugerido: Sucursal Norte</span></div>
+    </div></div>
+  </div>
+
+  <div class="scene" id="s5">
+    <div class="head"><div class="kicker">Control de personal</div><h2>Checador <em>con QR</em></h2></div>
+    <div class="phone"><div class="screen" style="text-align:center">
+      <h5>Sucursal Centro</h5><div class="sub">Escanea para registrar</div>
+      <div class="qr" id="qr"><div class="scan" id="scan"></div></div>
+      <div style="margin-top:46px"><span class="chip ok" id="s5chip">✓ Entrada 08:58 · con ubicación</span></div>
+    </div></div>
+  </div>
+
+  <div class="scene" id="s6">
+    <div class="head"><div class="kicker">Cobranza en campo</div><h2>Funciona <em>sin señal</em></h2></div>
+    <div class="phone"><div class="screen">
+      <div style="display:flex;justify-content:space-between;align-items:center"><h5>Ruta 4 · Hoy</h5><span class="chip alert" id="s6badge">Sin señal</span></div>
+      <div style="margin-top:20px">
+      <div class="row pr"><span>Cliente 1027</span><b>$450</b></div>
+      <div class="row pr"><span>Cliente 0981</span><b>$300</b></div>
+      <div class="row pr"><span>Cliente 1102</span><b>$520</b></div>
+      <div class="row pr"><span>Cliente 1210</span><b>$380</b></div>
+      </div>
+      <div style="margin-top:30px;font-size:28px;font-weight:700;color:#1F7A68" id="s6note">Pagos guardados en el teléfono</div>
+    </div></div>
+  </div>
+
+  <div class="scene" id="s7">
+    <div class="head"><div class="kicker">CRM Dyntec</div><h2>WhatsApp con <em>IA</em></h2></div>
+    <div class="phone"><div class="screen">
+      <h5>Bandeja WhatsApp</h5><div class="sub">Ana · cliente nueva</div>
+      <div class="msg in" id="s7m">Hola, ¿tienen lugar el sábado?</div>
+      <div class="copi" id="s7c"><small>✦ COPILOTO IA SUGIERE</small><span id="s7t"></span></div>
+    </div></div>
+  </div>
+
+  <div class="scene" id="s8">
+    <div class="head"><h2>Lo ves funcionando <em>antes</em> de invertir en todo</h2></div>
+    <div class="steps">
+      <div class="step" id="st1"><i>1</i>Demo navegable</div>
+      <div class="step" id="st2"><i>2</i>Fase 1</div>
+      <div class="step" id="st3"><i>3</i>Fase 2</div>
+    </div>
+  </div>
+
+  <div class="scene" id="s9">
+    <div class="biglogo"><img src="assets/official/iso_blanco.png"><div>DYNTEC</div></div>
+    <div class="center">Tu negocio,<br><em>en automático.</em></div>
+  </div>
+
+  <div class="scene" id="s10">
+    <div class="biglogo" style="top:420px"><img src="assets/official/iso_blanco.png" style="height:220px"><div style="font-size:52px">DYNTEC</div></div>
+    <div class="center" style="top:900px;font-size:76px">Escríbenos y platiquemos de tu proyecto</div>
+    <div class="cta" id="cta"><i></i>WhatsApp</div>
+    <div class="num">222 352 6054</div>
+    <div class="web">dyntec.com.mx</div>
+  </div>
+</div>
+<script>
+// Tiempos de cada escena (segundos). Se recalculan con el audio real.
+window.T = window.T || [0,4.6,8.6,10.0,11.9,13.3,15.3,19.7,22.7,24.9,29.0];
+const clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
+const ease=x=>{x=clamp(x);return 1-Math.pow(1-x,3)};
+const back=x=>{x=clamp(x);const c=1.6;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+// celdas
+const words=['=SUMA(','#REF!','v_final','#¡VALOR!','pedido','v_final2','1,250','#N/A','copia','REVISAR','no tocar','#REF!','caja','falta','=C9','ok?','#DIV/0!','final','pend.','v3_bueno','??','=B4*','enero','x'];
+const cells=document.getElementById('cells');
+words.forEach(w=>{const d=document.createElement('div');d.textContent=w;if(w.startsWith('#'))d.className='r';cells.appendChild(d)});
+// qr determinístico
+const qr=document.getElementById('qr');let seed=7;const rnd=()=>{seed=(seed*16807)%2147483647;return seed/2147483647};
+for(let y=0;y<21;y++)for(let x=0;x<21;x++){const i=document.createElement('i');const f=(a,b)=>(x>=a&&x<a+7&&y>=b&&y<b+7);let on;
+ const fin=[[0,0],[14,0],[0,14]].find(([a,b])=>f(a,b));
+ if(fin){const lx=x-fin[0],ly=y-fin[1];on=(lx==0||ly==0||lx==6||ly==6)||(lx>=2&&lx<=4&&ly>=2&&ly<=4)}else on=rnd()>.5;
+ i.style.background=on?'#141B21':'transparent';qr.appendChild(i)}
+const copiText='¡Hola Ana! Sí, el sábado tenemos lugar a las 10:00 y a las 12:00. ¿Te aparto uno?';
+function wavePath(h,t){const a=40*Math.sin(t*1.3),b=40*Math.cos(t*1.1);return `M0,${70+a} C320,${0+b} 720,${140-a} 1080,${50+b} L1080,140 L0,140 Z`}
+function render(t){
+  const T=window.T;
+  // wave height por escena
+  const lv=[300,1000,520,520,520,520,520,0,1500,1500];
+  let idx=0;for(let i=0;i<10;i++)if(t>=T[i])idx=i;
+  const prev=idx>0?lv[idx-1]:lv[0],k=ease((t-T[idx])/0.6);
+  const h=prev+(lv[idx]-prev)*k;
+  const W=document.getElementById('wave');W.style.height=(h+140)+'px';
+  document.getElementById('wp').setAttribute('d',wavePath(h,t));
+  for(let i=0;i<10;i++){
+    const s=document.getElementById('s'+(i+1));const st=T[i],en=T[i+1],lt=t-st;
+    const fin=i==9?1:1-ease((t-en)/0.25);
+    const op=t<st-0.01||t>en+0.25?0:Math.min(ease(lt/0.3),fin);
+    s.style.opacity=op;
+    const head=s.querySelector('.head');if(head)head.style.transform=`translateY(${(1-ease(lt/0.45))*50}px)`;
+    const ph=s.querySelector('.phone');if(ph)ph.style.transform=`translateY(${(1-back(lt/0.6))*260}px)`;
+  }
+  // s1
+  {const lt=t-T[0];
+   document.querySelectorAll('#s1 .l1,#s1 .l2,#s1 .l3').forEach((e,j)=>{const d=[0,1.6,3.0][j];e.style.opacity=ease((lt-d)/0.35);e.style.transform=`translateY(${(1-ease((lt-d)/0.35))*30}px)`});
+   [...cells.children].forEach((c,j)=>{c.style.transform=`translate(${Math.sin(t*9+j)*6}px,${Math.cos(t*7+j*2)*6}px) rotate(${-4+Math.sin(j)*3}deg)`;c.style.opacity=.85});
+   ['b1','b2'].forEach((id,j)=>{const e=document.getElementById(id);const d=[3.2,3.7][j];e.style.transform=`scale(${back((lt-d)/0.4)})`;e.style.opacity=clamp((lt-d)/0.15)});}
+  // s2
+  {const lt=t-T[1];const img=document.querySelector('#s2 .biglogo');img.style.transform=`translateX(-50%) scale(${0.6+0.4*back(lt/0.6)})`;
+   const c=document.querySelector('#s2 .center');c.style.opacity=ease((lt-0.5)/0.4);c.style.transform=`translateY(${(1-ease((lt-0.5)/0.4))*40}px)`;}
+  // s3
+  {const lt=t-T[2];document.getElementById('s3slot').className='slot'+(lt>0.55?' on':'');
+   const c=document.getElementById('s3chip');c.style.transform=`scale(${back((lt-0.8)/0.4)})`;}
+  // s4
+  {const lt=t-T[3];document.querySelectorAll('#s4 [data-to]').forEach((b,j)=>{b.textContent=Math.round(+b.dataset.to*ease((lt-0.3-j*0.1)/0.9))});
+   document.getElementById('s4chip').style.transform=`scale(${back((lt-1.2)/0.4)})`;}
+  // s5
+  {const lt=t-T[4];document.getElementById('scan').style.top=(20+380*(0.5-0.5*Math.cos(lt*4)))+'px';
+   document.getElementById('s5chip').style.transform=`scale(${back((lt-0.7)/0.4)})`;}
+  // s6
+  {const lt=t-T[5];document.querySelectorAll('#s6 .pr').forEach((r,j)=>{r.style.opacity=ease((lt-0.3-j*0.22)/0.25)});
+   const sync=lt>1.5;const b=document.getElementById('s6badge');b.textContent=sync?'✓ Sincronizado':'Sin señal';b.className='chip '+(sync?'ok':'alert');
+   document.getElementById('s6note').textContent=sync?'Todo llegó al sistema, sin duplicados':'Pagos guardados en el teléfono';}
+  // s7
+  {const lt=t-T[6];const m=document.getElementById('s7m');m.style.opacity=ease((lt-0.3)/0.3);
+   const c=document.getElementById('s7c');c.style.opacity=ease((lt-1.0)/0.3);
+   const n=Math.floor(clamp((lt-1.2)/2.4)*copiText.length);document.getElementById('s7t').textContent=copiText.slice(0,n)+(n<copiText.length&&lt>1.2?'▍':'');}
+  // s8
+  {const lt=t-T[7];['st1','st2','st3'].forEach((id,j)=>{const e=document.getElementById(id);const d=0.6+j*0.7;e.className='step'+(lt>d?' on':'');e.style.transform=`translateX(${(1-ease((lt-0.2-j*0.15)/0.4))*-80}px)`;e.style.opacity=ease((lt-0.2-j*0.15)/0.4)});}
+  // s9
+  {const lt=t-T[8];const img=document.querySelector('#s9 .biglogo');img.style.transform=`translateX(-50%) scale(${0.7+0.3*back(lt/0.6)})`;
+   const c=document.querySelector('#s9 .center');c.style.opacity=ease((lt-0.4)/0.4);}
+  // s10
+  {const lt=t-T[9];document.getElementById('cta').style.transform=`translateX(-50%) scale(${(0.6+0.4*back(lt/0.5))*(1+0.04*Math.sin(lt*6))})`;}
+}
+render(0);
+</script></body></html>
