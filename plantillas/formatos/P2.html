@@ -1,0 +1,78 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../brand.css">
+<!-- P2 · Carrusel "Mito vs. realidad" en fondo claro, tachados grandes. 1080×1350 por lámina (.slide) -->
+<style>
+body{background:#ccc}
+.slide{width:1080px;height:1350px;position:relative;overflow:hidden;background:var(--paper);color:var(--ink);margin-bottom:20px}
+.grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,148,129,.07) 2px,transparent 2px),linear-gradient(90deg,rgba(0,148,129,.07) 2px,transparent 2px);background-size:90px 90px}
+.top{position:absolute;left:90px;right:90px;top:80px;display:flex;justify-content:space-between;align-items:center;font-family:'Roboto';font-weight:500;font-size:28px;color:var(--teal);letter-spacing:.2em;text-transform:uppercase;font-style:italic}
+.top .pg{font-style:normal;letter-spacing:0;color:#9aa8a5}
+.lbl{display:inline-block;font-family:'Open Sauce One';font-weight:700;font-size:30px;letter-spacing:.18em;padding:10px 22px;border-radius:12px}
+.mito .lbl{background:#e3e9e8;color:#7d8a88}
+.real .lbl{background:var(--teal);color:#fff}
+.mito{position:absolute;left:90px;right:90px;top:210px}
+.mito p{font-family:'Open Sauce One';font-weight:700;font-size:74px;line-height:1.08;letter-spacing:-.02em;color:#97a3a1;margin-top:26px;position:relative;display:inline}
+.mito p{background:linear-gradient(transparent 52%,var(--red,#e46a5e) 52%,#e46a5e 60%,transparent 60%);background-size:100% 1.08em;-webkit-box-decoration-break:clone}
+.real{position:absolute;left:90px;right:90px;top:690px}
+.real p{font-family:'Open Sauce One';font-weight:700;font-size:70px;line-height:1.1;letter-spacing:-.02em;margin-top:26px}
+.real p em{font-style:normal;color:var(--teal)}
+.num{position:absolute;right:60px;bottom:-60px;font-family:'Open Sauce One';font-weight:700;font-size:520px;line-height:1;color:transparent;-webkit-text-stroke:4px rgba(0,148,129,.22)}
+.foot{position:absolute;left:90px;bottom:70px;display:flex;align-items:center;gap:14px;font-family:'Open Sauce One';font-weight:700;letter-spacing:.12em;font-size:26px;color:var(--ink)}
+.foot img{height:44px}
+/* portada */
+.cover h1{position:absolute;left:90px;right:90px;top:300px;font-size:132px;line-height:.98;letter-spacing:-.04em}
+.cover h1 em{font-style:normal;color:var(--teal)}
+.cover .sub{position:absolute;left:90px;top:860px;font-size:44px;line-height:1.3;max-width:800px}
+.cover .tags{position:absolute;left:90px;top:200px;display:flex;gap:14px}
+.cover .tags span{font-family:'Open Sauce One';font-weight:700;font-size:30px;padding:10px 22px;border-radius:12px}
+.cover .swipe{position:absolute;right:90px;bottom:80px;font-size:32px;font-weight:500;color:var(--teal)}
+/* cierre */
+.end{background:var(--teal);color:#fff}
+.end h2{position:absolute;left:90px;right:90px;top:260px;font-size:104px;line-height:1.02;letter-spacing:-.035em}
+.end p{position:absolute;left:90px;right:90px;top:640px;font-size:44px;line-height:1.35}
+.end .wa{position:absolute;left:90px;top:880px;display:flex;align-items:center;gap:20px;background:#fff;color:var(--ink);font-family:'Open Sauce One';font-weight:700;font-size:54px;padding:22px 40px;border-radius:999px}
+.end .wa i{width:66px;height:66px;border-radius:33px;background:#25d366;display:flex;align-items:center;justify-content:center;color:#fff;font-style:normal;font-size:38px}
+.end .foot{color:#fff}
+</style></head><body>
+
+<div class="slide cover"><div class="grid"></div>
+  <div class="tags"><span style="background:#e3e9e8;color:#7d8a88;text-decoration:line-through;text-decoration-color:#e46a5e;text-decoration-thickness:4px">MITO</span><span style="background:var(--teal);color:#fff">REALIDAD</span></div>
+  <h1><em>5 fugas</em> de dinero en un restaurante o club</h1>
+  <div class="sub">Las que no se ven en la caja… hasta que haces cuentas.</div>
+  <div class="num" style="-webkit-text-stroke-color:rgba(0,148,129,.18)">5</div>
+  <div class="foot"><img src="../assets/official/iso_color.png">DYNTEC</div>
+  <div class="swipe">Desliza →</div>
+</div>
+
+<div class="slide"><div class="grid"></div><div class="top"><span>Fuga 1 · Reservas</span><span class="pg">1/5</span></div>
+  <div class="mito"><span class="lbl">MITO</span><br><p>“Apartar mesas por WhatsApp funciona bien.”</p></div>
+  <div class="real"><span class="lbl">REALIDAD</span><p>Sin anticipo, la mesa que <em>no llega</em> es una venta que ya no recuperas.</p></div>
+  <div class="num">1</div><div class="foot"><img src="../assets/official/iso_color.png">DYNTEC</div></div>
+
+<div class="slide"><div class="grid"></div><div class="top"><span>Fuga 2 · Comandas</span><span class="pg">2/5</span></div>
+  <div class="mito"><span class="lbl">MITO</span><br><p>“La comanda en papel es más rápida.”</p></div>
+  <div class="real"><span class="lbl">REALIDAD</span><p>Un platillo mal anotado se <em>cocina dos veces</em> y se cobra una.</p></div>
+  <div class="num">2</div><div class="foot"><img src="../assets/official/iso_color.png">DYNTEC</div></div>
+
+<div class="slide"><div class="grid"></div><div class="top"><span>Fuga 3 · Inventario</span><span class="pg">3/5</span></div>
+  <div class="mito"><span class="lbl">MITO</span><br><p>“El inventario lo cuadro a fin de mes.”</p></div>
+  <div class="real"><span class="lbl">REALIDAD</span><p>Si no se descuenta <em>por receta</em>, la merma se esconde todo el mes.</p></div>
+  <div class="num">3</div><div class="foot"><img src="../assets/official/iso_color.png">DYNTEC</div></div>
+
+<div class="slide"><div class="grid"></div><div class="top"><span>Fuga 4 · Cuentas</span><span class="pg">4/5</span></div>
+  <div class="mito"><span class="lbl">MITO</span><br><p>“Las cuentas abiertas las controla el mesero.”</p></div>
+  <div class="real"><span class="lbl">REALIDAD</span><p>Cuando el cliente cambia de mesa o de barra, <em>algo se queda sin cobrar</em>.</p></div>
+  <div class="num">4</div><div class="foot"><img src="../assets/official/iso_color.png">DYNTEC</div></div>
+
+<div class="slide"><div class="grid"></div><div class="top"><span>Fuga 5 · Corte de caja</span><span class="pg">5/5</span></div>
+  <div class="mito"><span class="lbl">MITO</span><br><p>“El corte lo hago yo, me tardo poco.”</p></div>
+  <div class="real"><span class="lbl">REALIDAD</span><p>Un cierre a mano no muestra <em>cortesías, descuentos ni cancelaciones</em>.</p></div>
+  <div class="num">5</div><div class="foot"><img src="../assets/official/iso_color.png">DYNTEC</div></div>
+
+<div class="slide end">
+  <h2>Cierra las 5 fugas con un solo sistema.</h2>
+  <p>Reservas con anticipo, comandas en vivo, inventario por receta y corte automático. Lo ves funcionando antes de invertir en todo.</p>
+  <div class="wa"><i>✆</i>222 352 6054</div>
+  <p style="top:1030px;font-size:38px">Diagnóstico de 30 min <b>sin costo</b> · dyntec.com.mx</p>
+  <div class="foot"><img src="../assets/official/iso_blanco.png">DYNTEC</div>
+</div>
+</body></html>

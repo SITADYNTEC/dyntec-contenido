@@ -1,0 +1,90 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../brand.css">
+<!-- Historias 1080×1920 (.st). Apoyo (Metricool, sin stickers) + manuales (con espacio para sticker). -->
+<style>
+body{background:#999}
+.st{width:1080px;height:1920px;position:relative;overflow:hidden;margin-bottom:20px}
+.mark{position:absolute;left:90px;bottom:150px;display:flex;align-items:center;gap:14px;font-family:'Open Sauce One';font-weight:700;letter-spacing:.12em;font-size:28px}
+.mark img{height:54px}
+.k{font-family:'Roboto';font-weight:500;font-style:italic;font-size:30px;letter-spacing:.3em;text-transform:uppercase}
+.play{display:inline-flex;align-items:center;gap:18px;font-family:'Open Sauce One';font-weight:700;font-size:44px;padding:22px 40px;border-radius:999px}
+.play i{font-style:normal;width:64px;height:64px;border-radius:32px;display:flex;align-items:center;justify-content:center;font-size:28px}
+/* martes: split Excel / sistema, claro */
+.s1{background:var(--paper);color:var(--ink)}
+.s1 .split{position:absolute;left:90px;right:90px;top:560px;height:680px;display:grid;grid-template-columns:1fr 1fr;border-radius:34px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.18)}
+.s1 .xl{background:#fff;padding:30px;display:grid;grid-template-columns:repeat(3,1fr);gap:6px;align-content:start;font-family:'DejaVu Sans Mono',monospace;font-size:22px;color:#7c8a90}
+.s1 .xl div{background:#eef2f1;border-radius:6px;padding:12px 8px;white-space:nowrap;overflow:hidden}
+.s1 .xl .r{color:#e46a5e}
+.s1 .sy{background:var(--dark);padding:34px;display:flex;flex-direction:column;gap:18px}
+.s1 .sy div{height:70px;border-radius:16px;background:#1f2a33;display:flex;align-items:center;padding:0 22px;color:#fff;font-size:26px;font-weight:500}
+.s1 .sy div b{margin-left:auto;color:var(--mint)}
+.s1 .vs{position:absolute;left:50%;top:860px;transform:translate(-50%,-50%);width:120px;height:120px;border-radius:60px;background:var(--teal);color:#fff;font-family:'Open Sauce One';font-weight:700;font-size:44px;display:flex;align-items:center;justify-content:center;border:8px solid var(--paper)}
+.s1 h1{position:absolute;left:90px;right:90px;top:250px;font-size:96px;line-height:1.02;letter-spacing:-.035em}
+.s1 h1 em{font-style:normal;color:var(--teal)}
+.s1 .k{position:absolute;left:90px;top:180px;color:var(--teal)}
+.s1 .play{position:absolute;left:90px;top:1330px;background:var(--teal);color:#fff}
+.s1 .play i{background:#fff;color:var(--teal)}
+.s1 .hr{position:absolute;left:90px;top:1460px;font-size:38px;color:var(--gray,#606161)}
+/* jueves: POV oscuro */
+.s2{background:var(--dark);color:#fff}
+.s2 .bg{position:absolute;inset:0;background:url('../../publicar/2026-11-23_semana2/ia/bar_celular.png') 36% center/cover;filter:brightness(.55) saturate(.8)}
+.s2 .k{position:absolute;left:90px;top:220px;color:var(--mint)}
+.s2 h1{position:absolute;left:90px;right:90px;top:300px;font-size:150px;line-height:.95;letter-spacing:-.04em}
+.s2 h1 span{color:var(--mint)}
+.s2 p{position:absolute;left:90px;right:120px;top:640px;font-family:'Open Sauce One';font-weight:700;font-size:70px;line-height:1.08;letter-spacing:-.02em}
+.s2 .bub{position:absolute;right:90px;background:#fff;color:var(--ink);font-size:40px;font-weight:500;padding:22px 30px;border-radius:30px 30px 8px 30px;box-shadow:0 20px 40px rgba(0,0,0,.4)}
+.s2 .play{position:absolute;left:90px;top:1420px;background:#fff;color:var(--ink)}
+.s2 .play i{background:var(--teal);color:#fff}
+/* encuesta: teal */
+.s3{background:var(--teal);color:#fff}
+.s3 .k{position:absolute;left:90px;top:300px;color:var(--dark)}
+.s3 h1{position:absolute;left:90px;right:90px;top:380px;font-size:132px;line-height:.98;letter-spacing:-.04em}
+.s3 .poll{position:absolute;left:150px;right:150px;top:900px;height:380px;border:5px dashed rgba(255,255,255,.35);border-radius:40px;display:flex;align-items:center;justify-content:center;font-size:30px;color:rgba(255,255,255,.55);text-align:center}
+.s3 .hint{position:absolute;left:90px;right:90px;top:1360px;font-size:40px;line-height:1.35}
+/* quiz: claro con dark */
+.s4{background:#fff;color:var(--ink)}
+.s4 .band{position:absolute;left:0;right:0;top:0;height:820px;background:var(--dark)}
+.s4 .k{position:absolute;left:90px;top:260px;color:var(--mint)}
+.s4 h1{position:absolute;left:90px;right:90px;top:340px;font-size:104px;line-height:1.02;letter-spacing:-.035em;color:#fff}
+.s4 h1 em{font-style:normal;color:var(--mint)}
+.s4 .poll{position:absolute;left:150px;right:150px;top:930px;height:560px;border:5px dashed #cfdcd9;border-radius:40px;display:flex;align-items:center;justify-content:center;font-size:30px;color:#9aa8a5;text-align:center}
+</style></head><body>
+
+<div class="st s1">
+  <div class="k">Nuevo reel</div>
+  <h1>Un lunes con <em>Excel</em><br>vs. con sistema</h1>
+  <div class="split">
+    <div class="xl"><div>reservas_v3</div><div class="r">#¡REF!</div><div>??</div><div>mesa 4</div><div>pend.</div><div class="r">#N/A</div><div>=SUMA(</div><div>copia</div><div>falta</div><div>caja</div><div>revisar</div><div class="r">#DIV/0!</div><div>final2</div><div>…</div><div>no tocar</div><div>…</div><div>…</div><div>…</div></div>
+    <div class="sy"><div>Reservas hoy <b>24</b></div><div>Anticipos <b>✓</b></div><div>Comandas <b>en vivo</b></div><div>Inventario <b>al día</b></div><div>Corte <b>listo</b></div></div>
+  </div>
+  <div class="vs">VS</div>
+  <div class="play"><i>▶</i>Míralo en el feed</div>
+  <div class="hr">Ya está en el feed de @dyntecmx</div>
+  <div class="mark"><img src="../assets/official/iso_color.png">DYNTEC</div>
+</div>
+
+<div class="st s2"><div class="bg"></div>
+  <div class="k">Nuevo reel</div>
+  <h1>POV<span>:</span></h1>
+  <p>son las 11 p.m. y tu WhatsApp no para.</p>
+  <div class="bub" style="top:960px">¿Tienen mesa mañana?</div>
+  <div class="bub" style="top:1100px;right:200px">¿Me apartas una para 8? 🙏</div>
+  <div class="bub" style="top:1240px">¿Aceptan transferencia?</div>
+  <div class="play"><i>▶</i>Mira cómo se resuelve</div>
+  <div class="mark"><img src="../assets/official/iso_blanco.png">DYNTEC</div>
+</div>
+
+<div class="st s3">
+  <div class="k">Encuesta</div>
+  <h1>¿Cómo tomas reservas hoy?</h1>
+  <!-- espacio libre para el sticker de encuesta (top 900–1280) -->
+  <div class="hint">El jueves te enseñamos cómo se ve con anticipo y check-in con QR.</div>
+  <div class="mark"><img src="../assets/official/iso_blanco.png">DYNTEC</div>
+</div>
+
+<div class="st s4"><div class="band"></div>
+  <div class="k">Quiz rápido</div>
+  <h1>En un sábado lleno, ¿qué te cuesta <em>más</em>?</h1>
+  <!-- espacio libre para el sticker de quiz (top 930–1490) -->
+  <div class="mark"><img src="../assets/official/iso_color.png">DYNTEC</div>
+</div>
+</body></html>

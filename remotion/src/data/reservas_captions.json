@@ -1,0 +1,505 @@
+[
+{
+"text": "POV:",
+"startMs": 0,
+"endMs": 960,
+"timestampMs": 480,
+"confidence": null,
+"pageBreakAfter": true
+},
+{
+"text": " es",
+"startMs": 1440,
+"endMs": 1600,
+"timestampMs": 1520,
+"confidence": null
+},
+{
+"text": " viernes,",
+"startMs": 1680,
+"endMs": 2320,
+"timestampMs": 2000,
+"confidence": null,
+"pageBreakAfter": true
+},
+{
+"text": " once",
+"startMs": 2400,
+"endMs": 2640,
+"timestampMs": 2520,
+"confidence": null
+},
+{
+"text": " de",
+"startMs": 2720,
+"endMs": 2800,
+"timestampMs": 2760,
+"confidence": null
+},
+{
+"text": " la",
+"startMs": 2840,
+"endMs": 2880,
+"timestampMs": 2860,
+"confidence": null
+},
+{
+"text": " noche…",
+"startMs": 2960,
+"endMs": 3760,
+"timestampMs": 3360,
+"confidence": null,
+"pageBreakAfter": true
+},
+{
+"text": " y",
+"startMs": 3800,
+"endMs": 3840,
+"timestampMs": 3820,
+"confidence": null
+},
+{
+"text": " tu",
+"startMs": 3920,
+"endMs": 4000,
+"timestampMs": 3960,
+"confidence": null
+},
+{
+"text": " WhatsApp",
+"startMs": 4080,
+"endMs": 4560,
+"timestampMs": 4320,
+"confidence": null
+},
+{
+"text": " no",
+"startMs": 4720,
+"endMs": 4880,
+"timestampMs": 4800,
+"confidence": null
+},
+{
+"text": " para.",
+"startMs": 4960,
+"endMs": 5360,
+"timestampMs": 5160,
+"confidence": null,
+"pageBreakAfter": true
+},
+{
+"text": " ¿Tienen",
+"startMs": 5760,
+"endMs": 6000,
+"timestampMs": 5880,
+"confidence": null
+},
+{
+"text": " mesa",
+"startMs": 6080,
+"endMs": 6280,
+"timestampMs": 6180,
+"confidence": null
+},
+{
+"text": " mañana?",
+"startMs": 6320,
+"endMs": 6720,
+"timestampMs": 6520,
+"confidence": null,
+"pageBreakAfter": true
+},
+{
+"text": " ¿Me",
+"startMs": 7120,
+"endMs": 7200,
+"timestampMs": 7160,
+"confidence": null
+},
+{
+"text": " apartas",
+"startMs": 7280,
+"endMs": 7600,
+"timestampMs": 7440,
+"confidence": null
+},
+{
+"text": " una",
+"startMs": 7680,
+"endMs": 7760,
+"timestampMs": 7720,
+"confidence": null
+},
+{
+"text": " para",
+"startMs": 7840,
+"endMs": 7920,
+"timestampMs": 7880,
+"confidence": null
+},
+{
+"text": " ocho?",
+"startMs": 8000,
+"endMs": 8320,
+"timestampMs": 8160,
+"confidence": null,
+"pageBreakAfter": true
+},
+{
+"text": " Y",
+"startMs": 8773,
+"endMs": 8800,
+"timestampMs": 8786,
+"confidence": null
+},
+{
+"text": " el",
+"startMs": 8840,
+"endMs": 8880,
+"timestampMs": 8860,
+"confidence": null
+},
+{
+"text": " sábado,",
+"startMs": 9040,
+"endMs": 9600,
+"timestampMs": 9320,
+"confidence": null,
+"pageBreakAfter": true
+},
+{
+"text": " la",
+"startMs": 9680,
+"endMs": 9760,
+"timestampMs": 9720,
+"confidence": null
+},
+{
+"text": " mitad",
+"startMs": 9840,
+"endMs": 10240,
+"timestampMs": 10040,
+"confidence": null
+},
+{
+"text": " no",
+"startMs": 10320,
+"endMs": 10400,
+"timestampMs": 10360,
+"confidence": null
+},
+{
+"text": " llega.",
+"startMs": 10480,
+"endMs": 10880,
+"timestampMs": 10680,
+"confidence": null,
+"pageBreakAfter": true
+},
+{
+"text": " Ahora",
+"startMs": 11333,
+"endMs": 11520,
+"timestampMs": 11426,
+"confidence": null
+},
+{
+"text": " imagina",
+"startMs": 11640,
+"endMs": 11920,
+"timestampMs": 11780,
+"confidence": null
+},
+{
+"text": " esto:",
+"startMs": 12080,
+"endMs": 12640,
+"timestampMs": 12360,
+"confidence": null,
+"pageBreakAfter": true
+},
+{
+"text": " tu",
+"startMs": 12680,
+"endMs": 12720,
+"timestampMs": 12700,
+"confidence": null
+},
+{
+"text": " cliente",
+"startMs": 12800,
+"endMs": 13200,
+"timestampMs": 13000,
+"confidence": null
+},
+{
+"text": " reserva",
+"startMs": 13280,
+"endMs": 13600,
+"timestampMs": 13440,
+"confidence": null
+},
+{
+"text": " solo,",
+"startMs": 13680,
+"endMs": 14240,
+"timestampMs": 13960,
+"confidence": null,
+"pageBreakAfter": true
+},
+{
+"text": " paga",
+"startMs": 14320,
+"endMs": 14480,
+"timestampMs": 14400,
+"confidence": null
+},
+{
+"text": " el",
+"startMs": 14520,
+"endMs": 14560,
+"timestampMs": 14540,
+"confidence": null
+},
+{
+"text": " anticipo",
+"startMs": 14640,
+"endMs": 15040,
+"timestampMs": 14840,
+"confidence": null
+},
+{
+"text": " con",
+"startMs": 15120,
+"endMs": 15200,
+"timestampMs": 15160,
+"confidence": null
+},
+{
+"text": " tarjeta,",
+"startMs": 15320,
+"endMs": 16000,
+"timestampMs": 15660,
+"confidence": null,
+"pageBreakAfter": true
+},
+{
+"text": " OXXO",
+"startMs": 16080,
+"endMs": 16440,
+"timestampMs": 16260,
+"confidence": null
+},
+{
+"text": " o",
+"startMs": 16480,
+"endMs": 16560,
+"timestampMs": 16520,
+"confidence": null
+},
+{
+"text": " transferencia…",
+"startMs": 16640,
+"endMs": 17680,
+"timestampMs": 17160,
+"confidence": null,
+"pageBreakAfter": true
+},
+{
+"text": " y",
+"startMs": 17720,
+"endMs": 17760,
+"timestampMs": 17740,
+"confidence": null
+},
+{
+"text": " recibe",
+"startMs": 17840,
+"endMs": 18160,
+"timestampMs": 18000,
+"confidence": null
+},
+{
+"text": " su",
+"startMs": 18240,
+"endMs": 18320,
+"timestampMs": 18280,
+"confidence": null
+},
+{
+"text": " código",
+"startMs": 18400,
+"endMs": 18720,
+"timestampMs": 18560,
+"confidence": null
+},
+{
+"text": " QR.",
+"startMs": 18880,
+"endMs": 19360,
+"timestampMs": 19120,
+"confidence": null,
+"pageBreakAfter": true
+},
+{
+"text": " Llega,",
+"startMs": 19813,
+"endMs": 20320,
+"timestampMs": 20066,
+"confidence": null,
+"pageBreakAfter": true
+},
+{
+"text": " escanea",
+"startMs": 20440,
+"endMs": 21000,
+"timestampMs": 20720,
+"confidence": null
+},
+{
+"text": " y",
+"startMs": 21120,
+"endMs": 21200,
+"timestampMs": 21160,
+"confidence": null
+},
+{
+"text": " entra.",
+"startMs": 21280,
+"endMs": 21760,
+"timestampMs": 21520,
+"confidence": null,
+"pageBreakAfter": true
+},
+{
+"text": " Sin",
+"startMs": 21920,
+"endMs": 22000,
+"timestampMs": 21960,
+"confidence": null
+},
+{
+"text": " libreta,",
+"startMs": 22080,
+"endMs": 22800,
+"timestampMs": 22440,
+"confidence": null,
+"pageBreakAfter": true
+},
+{
+"text": " sin",
+"startMs": 22880,
+"endMs": 22960,
+"timestampMs": 22920,
+"confidence": null
+},
+{
+"text": " llamadas,",
+"startMs": 23000,
+"endMs": 23680,
+"timestampMs": 23340,
+"confidence": null,
+"pageBreakAfter": true
+},
+{
+"text": " sin",
+"startMs": 23760,
+"endMs": 23920,
+"timestampMs": 23840,
+"confidence": null
+},
+{
+"text": " mesas",
+"startMs": 24000,
+"endMs": 24320,
+"timestampMs": 24160,
+"confidence": null
+},
+{
+"text": " vacías.",
+"startMs": 24440,
+"endMs": 24880,
+"timestampMs": 24660,
+"confidence": null,
+"pageBreakAfter": true
+},
+{
+"text": " Agenda",
+"startMs": 25307,
+"endMs": 25520,
+"timestampMs": 25414,
+"confidence": null
+},
+{
+"text": " tu",
+"startMs": 25600,
+"endMs": 25680,
+"timestampMs": 25640,
+"confidence": null
+},
+{
+"text": " diagnóstico",
+"startMs": 25720,
+"endMs": 26240,
+"timestampMs": 25980,
+"confidence": null
+},
+{
+"text": " de",
+"startMs": 26280,
+"endMs": 26320,
+"timestampMs": 26300,
+"confidence": null
+},
+{
+"text": " treinta",
+"startMs": 26480,
+"endMs": 26720,
+"timestampMs": 26600,
+"confidence": null
+},
+{
+"text": " minutos",
+"startMs": 26800,
+"endMs": 27200,
+"timestampMs": 27000,
+"confidence": null
+},
+{
+"text": " sin",
+"startMs": 27280,
+"endMs": 27440,
+"timestampMs": 27360,
+"confidence": null
+},
+{
+"text": " costo.",
+"startMs": 27520,
+"endMs": 28160,
+"timestampMs": 27840,
+"confidence": null,
+"pageBreakAfter": true
+},
+{
+"text": " Escríbenos",
+"startMs": 28200,
+"endMs": 28640,
+"timestampMs": 28420,
+"confidence": null
+},
+{
+"text": " por",
+"startMs": 28720,
+"endMs": 28800,
+"timestampMs": 28760,
+"confidence": null
+},
+{
+"text": " WhatsApp.",
+"startMs": 28880,
+"endMs": 29520,
+"timestampMs": 29200,
+"confidence": null,
+"pageBreakAfter": true
+}
+]
